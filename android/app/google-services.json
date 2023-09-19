@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "369515187929",
+    "project_id": "essreso-3b4c5",
+    "storage_bucket": "essreso-3b4c5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:369515187929:android:09ac4c932aa3225ebd38c8",
+        "android_client_info": {
+          "package_name": "com.resonancehyderabad.ess"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "369515187929-q90qmf3e325mkba214i4056d31lvvtmo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUxOCFt8EdIaK8DO5zf2VLjRuOH8p4Mc8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "369515187929-q90qmf3e325mkba214i4056d31lvvtmo.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "369515187929-16lm1q2c6dgj2l92scl1k81s7pt6msr0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.resonancehyderabad.ess"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:369515187929:android:c4e82eae308a2804bd38c8",
+        "android_client_info": {
+          "package_name": "com.resonancehyderabad.ess"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "369515187929-q90qmf3e325mkba214i4056d31lvvtmo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUxOCFt8EdIaK8DO5zf2VLjRuOH8p4Mc8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "369515187929-q90qmf3e325mkba214i4056d31lvvtmo.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "369515187929-16lm1q2c6dgj2l92scl1k81s7pt6msr0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.resonancehyderabad.ess"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

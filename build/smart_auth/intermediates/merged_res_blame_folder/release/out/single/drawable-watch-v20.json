@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/smart_auth/intermediates/merged_res/release/drawable-watch-v20/common_google_signin_btn_text_light_normal.xml",
+        "source": "/Users/www.abcom.in/.gradle/caches/transforms-3/295557e222aa376ac1fd7f3fea7f8a00/transformed/jetified-play-services-auth-20.4.0/res/drawable-watch-v20/common_google_signin_btn_text_light_normal.xml"
+    },
+    {
+        "merged": "/Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/smart_auth/intermediates/merged_res/release/drawable-watch-v20/common_google_signin_btn_text_dark_normal.xml",
+        "source": "/Users/www.abcom.in/.gradle/caches/transforms-3/295557e222aa376ac1fd7f3fea7f8a00/transformed/jetified-play-services-auth-20.4.0/res/drawable-watch-v20/common_google_signin_btn_text_dark_normal.xml"
+    },
+    {
+        "merged": "/Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/smart_auth/intermediates/merged_res/release/drawable-watch-v20/common_google_signin_btn_text_disabled.xml",
+        "source": "/Users/www.abcom.in/.gradle/caches/transforms-3/295557e222aa376ac1fd7f3fea7f8a00/transformed/jetified-play-services-auth-20.4.0/res/drawable-watch-v20/common_google_signin_btn_text_disabled.xml"
+    }
+]

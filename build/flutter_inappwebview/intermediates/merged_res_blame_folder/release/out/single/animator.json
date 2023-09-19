@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "/Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_inappwebview/intermediates/merged_res/release/animator/fragment_open_exit.xml",
+        "source": "/Users/www.abcom.in/.gradle/caches/transforms-3/f25debdc65d61e9778f9a5817b982fb6/transformed/fragment-1.3.6/res/animator/fragment_open_exit.xml"
+    },
+    {
+        "merged": "/Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_inappwebview/intermediates/merged_res/release/animator/fragment_close_enter.xml",
+        "source": "/Users/www.abcom.in/.gradle/caches/transforms-3/f25debdc65d61e9778f9a5817b982fb6/transformed/fragment-1.3.6/res/animator/fragment_close_enter.xml"
+    },
+    {
+        "merged": "/Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_inappwebview/intermediates/merged_res/release/animator/fragment_close_exit.xml",
+        "source": "/Users/www.abcom.in/.gradle/caches/transforms-3/f25debdc65d61e9778f9a5817b982fb6/transformed/fragment-1.3.6/res/animator/fragment_close_exit.xml"
+    },
+    {
+        "merged": "/Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_inappwebview/intermediates/merged_res/release/animator/fragment_fade_enter.xml",
+        "source": "/Users/www.abcom.in/.gradle/caches/transforms-3/f25debdc65d61e9778f9a5817b982fb6/transformed/fragment-1.3.6/res/animator/fragment_fade_enter.xml"
+    },
+    {
+        "merged": "/Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_inappwebview/intermediates/merged_res/release/animator/fragment_fade_exit.xml",
+        "source": "/Users/www.abcom.in/.gradle/caches/transforms-3/f25debdc65d61e9778f9a5817b982fb6/transformed/fragment-1.3.6/res/animator/fragment_fade_exit.xml"
+    },
+    {
+        "merged": "/Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_inappwebview/intermediates/merged_res/release/animator/fragment_open_enter.xml",
+        "source": "/Users/www.abcom.in/.gradle/caches/transforms-3/f25debdc65d61e9778f9a5817b982fb6/transformed/fragment-1.3.6/res/animator/fragment_open_enter.xml"
+    }
+]
