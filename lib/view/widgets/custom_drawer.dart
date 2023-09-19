@@ -6,13 +6,13 @@ import 'package:attendance/controller/widget_state/selected_page.dart';
 import 'package:attendance/routes/getRoutes.dart';
 import 'package:attendance/utils/get_user_id.dart';
 import 'package:attendance/utils/get_widget_state.dart';
-import 'package:attendance/view/pages/add_application.dart';
-import 'package:attendance/view/pages/bank/bank_details_screen.dart';
-import 'package:attendance/view/pages/login.dart';
-import 'package:attendance/view/pages/outside_work.dart';
-import 'package:attendance/view/pages/payslip.dart';
-import 'package:attendance/view/pages/regularisation/screen/regularisation.dart';
-import 'package:attendance/view/pages/view_applications.dart';
+import 'package:attendance/view/pages/applications/add_application.dart';
+import 'package:attendance/view/pages/finances/bank/bank_details_screen.dart';
+import 'package:attendance/view/pages/authenthication/login.dart';
+import 'package:attendance/view/pages/regularisation/outside_work.dart';
+import 'package:attendance/view/pages/finances/payslip.dart';
+import 'package:attendance/view/pages/regularisation/regularisation.dart';
+import 'package:attendance/view/pages/applications/view_applications.dart';
 import 'package:attendance/view/widgets/buttons.dart';
 import 'package:attendance/view/widgets/clippp.dart';
 import 'package:attendance/view/widgets/custom_dialog.dart';
@@ -47,11 +47,11 @@ class _CustomDrawerState extends State<CustomDrawer> {
     dynamic iconList = Strings().drawerIconList;
     double width = MediaQuery.of(context).size.width;
     return Drawer(
-      backgroundColor: Strings.ColorBlue,
+      backgroundColor: Strings.primaryColor,
       child: SingleChildScrollView(
         child: Container(
           width: width / 1.5,
-          color: Strings.ColorBlue,
+          color: Strings.primaryColor,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -123,7 +123,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                                   color: selectedPageCtrl
                                               .stateSelectedPage.value ==
                                           -1
-                                      ? Strings.ColorBlue
+                                      ? Strings.primaryColor
                                       : selectedPageCtrl
                                                   .stateSelectedPage.value ==
                                               index

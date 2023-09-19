@@ -2,7 +2,7 @@ import 'dart:developer';
 import 'package:attendance/model/get_bank_details_model.dart';
 import 'package:attendance/service/bank_service.dart';
 import 'package:attendance/utils/get_user_id.dart';
-import 'package:attendance/view/pages/bank/edit_bank_details_screen.dart';
+import 'package:attendance/view/pages/finances/bank/edit_bank_details_screen.dart';
 import 'package:attendance/view/widgets/custom_snackbar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

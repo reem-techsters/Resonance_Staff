@@ -28,7 +28,7 @@ class Buttons {
         onPressed: () => func.call(),
         style: ButtonStyle(
             backgroundColor:
-                MaterialStateProperty.all<Color>(Strings.ColorBlue)),
+                MaterialStateProperty.all<Color>(Strings.primaryColor)),
         child: Text(text,
             style: TextStyle(
                 fontFamily: 'Lato', fontSize: 16, color: Colors.white)));
@@ -40,7 +40,7 @@ class Buttons {
       style: ElevatedButton.styleFrom(
         minimumSize: Size(210, 55),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-        backgroundColor: Strings.ColorBlue,
+        backgroundColor: Strings.primaryColor,
       ),
       child: Text(text,
           style:

@@ -1,26 +1,21 @@
-import 'package:attendance/main.dart';
-import 'package:attendance/view/pages/add_application.dart';
-import 'package:attendance/view/pages/applied_leaves.dart';
-import 'package:attendance/view/pages/apply_bulk_pass.dart';
-import 'package:attendance/view/pages/apply_pass.dart';
-import 'package:attendance/view/pages/approve_leaves.dart';
-import 'package:attendance/view/pages/dummy.dart';
+import 'package:attendance/view/pages/applications/add_application.dart';
+import 'package:attendance/view/pages/leaves/applied_leaves.dart';
+import 'package:attendance/view/pages/outpass/apply_bulk_pass.dart';
+import 'package:attendance/view/pages/outpass/apply_pass.dart';
+import 'package:attendance/view/pages/approve_leaves/approve_leaves.dart';
 import 'package:attendance/view/pages/employee_attendance.dart';
-import 'package:attendance/view/pages/outside_work.dart';
-import 'package:attendance/view/pages/parent_concern_screen.dart';
-import 'package:attendance/view/pages/payslip.dart';
-import 'package:attendance/view/pages/regularisation/screen/regularisation.dart';
-import 'package:attendance/view/pages/my_attendance.dart';
-import 'package:attendance/view/pages/today_attendance.dart';
-import 'package:attendance/view/pages/view_applications.dart';
+import 'package:attendance/view/pages/parent_concerns/parent_concern_screen.dart';
+import 'package:attendance/view/pages/finances/payslip.dart';
+import 'package:attendance/view/pages/regularisation/regularisation.dart';
+import 'package:attendance/view/pages/my_attendence/my_attendance.dart';
+import 'package:attendance/view/pages/dashboard/dashboard.dart';
+import 'package:attendance/view/pages/applications/view_applications.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-
-import '../view/pages/gate_pass.dart';
-import '../view/pages/login.dart';
-import '../view/pages/apply_leaves.dart';
-import '../view/pages/profile.dart';
-import '../view/pages/reporting_employee/screen/reporting_employee.dart';
+import '../view/pages/outpass/gate_pass.dart';
+import '../view/pages/authenthication/login.dart';
+import '../view/pages/leaves/apply_leaves.dart';
+import '../view/pages/dashboard/profile.dart';
+import '../view/pages/reporting_employee/reporting_employee.dart';
 
 class GetRoutes {
   static String pageLogin = "/login";
@@ -66,9 +61,9 @@ class GetRoutes {
         return MaterialPageRoute(builder: (context) => MyAttendance());
       case "/reportingEmployee":
         return MaterialPageRoute(builder: (context) => ReportingEmployee());
-      case "/employeeAttendance":
-        return MaterialPageRoute(
-            builder: (context) => EmployeeAttendance(userid: data));
+      // case "/employeeAttendance":
+      //   return MaterialPageRoute(
+      //       builder: (context) => EmployeeAttendance(userid: data));
       case "/regularisation":
         return MaterialPageRoute(builder: (context) => Regulaization());
       case "/ApplyPass":
@@ -87,7 +82,7 @@ class GetRoutes {
         return MaterialPageRoute(builder: (context) => ViewApplication());
       default:
         return MaterialPageRoute(
-          builder: (context) => TodayAttendance(),
+          builder: (context) => DashBoardScreen(),
           settings: args,
         );
     }

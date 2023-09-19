@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:attendance/constant/strings.dart';
 import 'package:attendance/model/user_model.dart';
 import 'package:attendance/routes/getRoutes.dart';
-import 'package:attendance/view/pages/today_attendance.dart';
+import 'package:attendance/view/pages/dashboard/dashboard.dart';
 //import 'package:attendance/view/widgets/buttons.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -136,7 +136,7 @@ void main() async {
     title: 'Redo Bridge - Staff',
     onGenerateRoute: GetRoutes.generateRoutes,
     routes: {
-      'todayAttendance' : (context) => TodayAttendance(),
+      'todayAttendance' : (context) => DashBoardScreen(),
     },
     theme: ThemeData(
       //can be omitted if you want the default themep

@@ -15,7 +15,7 @@ class CustomAppBar extends StatelessWidget {
         width: double.infinity,
         height: height / 2.8,
         decoration: BoxDecoration(
-            color: Strings.ColorBlue,
+            color: Strings.primaryColor,
             borderRadius:
                 BorderRadius.only(bottomLeft: Radius.elliptical(80, 60))),
         child: Column(children: [

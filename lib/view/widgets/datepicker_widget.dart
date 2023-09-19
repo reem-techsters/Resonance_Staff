@@ -26,13 +26,13 @@ class DatePickerWidget extends StatelessWidget {
         controller: textController,
         decoration: Styles.textInputBlue.copyWith(
           focusedBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Strings.ColorBlue, width: 2)),
+              borderSide: BorderSide(color: Strings.primaryColor, width: 2)),
           disabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Strings.ColorBlue, width: 2)),
+              borderSide: BorderSide(color: Strings.primaryColor, width: 2)),
           hintText: hintText,
           prefixIcon: Icon(
             iconName,
-            color: Strings.ColorBlue,
+            color: Strings.primaryColor,
           ),
         ),
       ),

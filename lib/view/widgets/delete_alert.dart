@@ -1,6 +1,6 @@
 import 'dart:developer';
 import 'package:attendance/controller/model_state/guest_ctrl.dart';
-import 'package:attendance/view/pages/login.dart';
+import 'package:attendance/view/pages/authenthication/login.dart';
 import 'package:attendance/view/widgets/buttons.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

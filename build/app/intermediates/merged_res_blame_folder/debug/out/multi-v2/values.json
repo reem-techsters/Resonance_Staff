@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+            "outputFile": "/Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
             "map": [
                 {
                     "source": "/Users/www.abcom.in/.gradle/caches/transforms-3/005627934cb5de51d804cd3c597f8200/transformed/core-1.8.0/res/values/values.xml",
@@ -39,6 +39,23 @@
                         "endLines": "2046,2052,2062,3101,3105",
                         "endColumns": "24,24,24,24,24",
                         "endOffsets": "133987,134165,134449,169874,170001"
+                    }
+                },
+                {
+                    "source": "/Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/app/generated/res/google-services/debug/values/values.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "55,199,281,385,494,614,711",
+                        "endColumns": "143,81,103,108,119,96,73",
+                        "endOffsets": "194,276,380,489,609,706,780"
+                    },
+                    "to": {
+                        "startLines": "349,354,355,356,357,358,360",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "23736,24177,24259,24363,24472,24592,24736",
+                        "endColumns": "143,81,103,108,119,96,73",
+                        "endOffsets": "23875,24254,24358,24467,24587,24684,24805"
                     }
                 },
                 {
@@ -237,25 +254,6 @@
                     }
                 },
                 {
-                    "source": "/Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_inappwebview/intermediates/packaged_res/debug/values/values.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,11,14",
-                        "startColumns": "4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,102,153,210,259,306,353,426,502",
-                        "endLines": "2,3,4,5,6,7,10,13,21",
-                        "endColumns": "46,50,56,48,46,46,12,12,12",
-                        "endOffsets": "97,148,205,254,301,348,421,497,949"
-                    },
-                    "to": {
-                        "startLines": "324,325,326,327,328,359,368,1454,1800",
-                        "startColumns": "4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "21001,21048,21099,21156,21205,24689,25376,94447,120665",
-                        "endLines": "324,325,326,327,328,359,370,1456,1807",
-                        "endColumns": "46,50,56,48,46,46,12,12,12",
-                        "endOffsets": "21043,21094,21151,21200,21247,24731,25444,94518,121112"
-                    }
-                },
-                {
                     "source": "/Users/www.abcom.in/.gradle/caches/transforms-3/9308aba1f04577b723ac05f53a8158c4/transformed/lifecycle-runtime-2.5.1/res/values/values.xml",
                     "from": {
                         "startLines": "2",
@@ -290,39 +288,22 @@
                     }
                 },
                 {
-                    "source": "/Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/app/generated/res/google-services/debug/values/values.xml",
+                    "source": "/Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_inappwebview/intermediates/packaged_res/debug/values/values.xml",
                     "from": {
-                        "startLines": "2,3,4,5,6,7,8",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "55,199,281,385,494,614,711",
-                        "endColumns": "143,81,103,108,119,96,73",
-                        "endOffsets": "194,276,380,489,609,706,780"
+                        "startLines": "2,3,4,5,6,7,8,11,14",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,102,153,210,259,306,353,426,502",
+                        "endLines": "2,3,4,5,6,7,10,13,21",
+                        "endColumns": "46,50,56,48,46,46,12,12,12",
+                        "endOffsets": "97,148,205,254,301,348,421,497,949"
                     },
                     "to": {
-                        "startLines": "349,354,355,356,357,358,360",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "23736,24177,24259,24363,24472,24592,24736",
-                        "endColumns": "143,81,103,108,119,96,73",
-                        "endOffsets": "23875,24254,24358,24467,24587,24684,24805"
-                    }
-                },
-                {
-                    "source": "/Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/android/app/src/main/res/values/styles.xml",
-                    "from": {
-                        "startLines": "3,14",
-                        "startColumns": "4,4",
-                        "startOffsets": "173,818",
-                        "endLines": "7,16",
-                        "endColumns": "12,12",
-                        "endOffsets": "476,982"
-                    },
-                    "to": {
-                        "startLines": "1457,1462",
-                        "startColumns": "4,4",
-                        "startOffsets": "94523,94831",
-                        "endLines": "1461,1464",
-                        "endColumns": "12,12",
-                        "endOffsets": "94826,94995"
+                        "startLines": "324,325,326,327,328,359,368,1454,1800",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "21001,21048,21099,21156,21205,24689,25376,94447,120665",
+                        "endLines": "324,325,326,327,328,359,370,1456,1807",
+                        "endColumns": "46,50,56,48,46,46,12,12,12",
+                        "endOffsets": "21043,21094,21151,21200,21247,24731,25444,94518,121112"
                     }
                 },
                 {
@@ -342,6 +323,25 @@
                         "endLines": "3109",
                         "endColumns": "24",
                         "endOffsets": "170238"
+                    }
+                },
+                {
+                    "source": "/Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/android/app/src/main/res/values/styles.xml",
+                    "from": {
+                        "startLines": "3,14",
+                        "startColumns": "4,4",
+                        "startOffsets": "173,818",
+                        "endLines": "7,16",
+                        "endColumns": "12,12",
+                        "endOffsets": "476,982"
+                    },
+                    "to": {
+                        "startLines": "1457,1462",
+                        "startColumns": "4,4",
+                        "startOffsets": "94523,94831",
+                        "endLines": "1461,1464",
+                        "endColumns": "12,12",
+                        "endOffsets": "94826,94995"
                     }
                 }
             ]

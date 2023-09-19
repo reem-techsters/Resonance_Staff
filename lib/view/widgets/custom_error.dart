@@ -17,7 +17,7 @@ class CustomError {
           subTitle: msg,
           titleTextStyle: TextStyle(
             fontSize: 22,
-            color: Strings.ColorBlue,
+            color: Strings.primaryColor,
             fontWeight: FontWeight.w500,
           ),
           subtitleTextStyle: TextStyle(

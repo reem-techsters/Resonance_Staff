@@ -9,40 +9,40 @@
 9        android:targetSdkVersion="33" />
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->/Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/android/app/src/main/AndroidManifest.xml:4:5-66
-11-->/Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/android/app/src/main/AndroidManifest.xml:4:22-64
+11-->/Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/android/app/src/main/AndroidManifest.xml:4:5-66
+11-->/Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/android/app/src/main/AndroidManifest.xml:4:22-64
 12    <uses-permission android:name="android.permission.WAKE_LOCK" />
-12-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-68
-12-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:10:22-65
+12-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-68
+12-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:10:22-65
 13    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Permissions options for the `notification` group -->
-13-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:11:5-79
-13-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:11:22-76
+13-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:11:5-79
+13-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:11:22-76
 14    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-14-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:13:5-77
-14-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:13:22-74
+14-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:13:5-77
+14-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:13:22-74
 15
 16    <queries>
-16-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-13:15
+16-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-13:15
 17        <intent>
-17-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-12:18
+17-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-12:18
 18            <action android:name="android.support.customtabs.action.CustomTabsService" />
-18-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-90
-18-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:11:21-87
+18-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-90
+18-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:11:21-87
 19        </intent>
 20    </queries>
 21
 22    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-22-->[:flutter_local_notifications] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-81
-22-->[:flutter_local_notifications] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:9:22-78
+22-->[:flutter_local_notifications] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-81
+22-->[:flutter_local_notifications] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:9:22-78
 23    <uses-permission android:name="android.permission.VIBRATE" />
-23-->[:flutter_local_notifications] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-66
-23-->[:flutter_local_notifications] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:10:22-63
+23-->[:flutter_local_notifications] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-66
+23-->[:flutter_local_notifications] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:10:22-63
 24    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
-24-->[:flutter_local_notifications] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:11:5-81
-24-->[:flutter_local_notifications] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:11:22-78
+24-->[:flutter_local_notifications] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:11:5-81
+24-->[:flutter_local_notifications] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:11:22-78
 25    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" /> <!-- Required by older versions of Google Play services to create IID tokens -->
-25-->[:flutter_local_notifications] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:12:5-79
-25-->[:flutter_local_notifications] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:12:22-76
+25-->[:flutter_local_notifications] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:12:5-79
+25-->[:flutter_local_notifications] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:12:22-76
 26    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
 26-->[com.google.firebase:firebase-messaging:23.2.0] /Users/www.abcom.in/.gradle/caches/transforms-3/86fdbf54bf9c9df9cfa1572fa88873ef/transformed/jetified-firebase-messaging-23.2.0/AndroidManifest.xml:28:5-82
 26-->[com.google.firebase:firebase-messaging:23.2.0] /Users/www.abcom.in/.gradle/caches/transforms-3/86fdbf54bf9c9df9cfa1572fa88873ef/transformed/jetified-firebase-messaging-23.2.0/AndroidManifest.xml:28:22-79
@@ -95,63 +95,63 @@
 72            android:value="2" />
 73
 74        <service
-74-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:16:9-19:72
+74-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:16:9-19:72
 75            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingBackgroundService"
-75-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:17:13-107
+75-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:17:13-107
 76            android:exported="false"
-76-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:18:13-37
+76-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:18:13-37
 77            android:permission="android.permission.BIND_JOB_SERVICE" />
-77-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:19:13-69
+77-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:19:13-69
 78        <service
-78-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:20:9-26:19
+78-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:20:9-26:19
 79            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingService"
-79-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:21:13-97
+79-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:21:13-97
 80            android:exported="false" >
-80-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:22:13-37
+80-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:22:13-37
 81            <intent-filter>
-81-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:23:13-25:29
+81-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:23:13-25:29
 82                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-82-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:24:17-78
-82-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:24:25-75
+82-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:24:17-78
+82-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:24:25-75
 83            </intent-filter>
 84        </service>
 85
 86        <receiver
-86-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:28:9-35:20
+86-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:28:9-35:20
 87            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingReceiver"
-87-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:29:13-98
+87-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:29:13-98
 88            android:exported="true"
-88-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:30:13-36
+88-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:30:13-36
 89            android:permission="com.google.android.c2dm.permission.SEND" >
-89-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:31:13-73
+89-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:31:13-73
 90            <intent-filter>
-90-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:32:13-34:29
+90-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:32:13-34:29
 91                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-91-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:33:17-81
-91-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:33:25-78
+91-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:33:17-81
+91-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:33:25-78
 92            </intent-filter>
 93        </receiver>
 94
 95        <service
-95-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:37:9-41:19
+95-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:37:9-41:19
 96            android:name="com.google.firebase.components.ComponentDiscoveryService"
-96-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:37:18-89
+96-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:37:18-89
 97            android:directBootAware="true"
 97-->[com.google.firebase:firebase-common:20.3.3] /Users/www.abcom.in/.gradle/caches/transforms-3/49aef312fafc36fcf56d99d217fcc023/transformed/jetified-firebase-common-20.3.3/AndroidManifest.xml:34:13-43
 98            android:exported="false" >
 98-->[com.google.firebase:firebase-messaging:23.2.0] /Users/www.abcom.in/.gradle/caches/transforms-3/86fdbf54bf9c9df9cfa1572fa88873ef/transformed/jetified-firebase-messaging-23.2.0/AndroidManifest.xml:54:13-37
 99            <meta-data
-99-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:38:13-40:85
+99-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:38:13-40:85
 100                android:name="com.google.firebase.components:io.flutter.plugins.firebase.messaging.FlutterFirebaseAppRegistrar"
-100-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:39:17-128
+100-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:39:17-128
 101                android:value="com.google.firebase.components.ComponentRegistrar" />
-101-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:40:17-82
+101-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:40:17-82
 102            <meta-data
-102-->[:firebase_core] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
+102-->[:firebase_core] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
 103                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
-103-->[:firebase_core] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-124
+103-->[:firebase_core] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-124
 104                android:value="com.google.firebase.components.ComponentRegistrar" />
-104-->[:firebase_core] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
+104-->[:firebase_core] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
 105            <meta-data
 105-->[com.google.firebase:firebase-messaging:23.2.0] /Users/www.abcom.in/.gradle/caches/transforms-3/86fdbf54bf9c9df9cfa1572fa88873ef/transformed/jetified-firebase-messaging-23.2.0/AndroidManifest.xml:55:13-57:85
 106                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
@@ -179,122 +179,122 @@
 117        </service>
 118
 119        <provider
-119-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:43:9-47:38
+119-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:43:9-47:38
 120            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingInitProvider"
-120-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:44:13-102
+120-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:44:13-102
 121            android:authorities="com.resonancehyderabad.ess.flutterfirebasemessaginginitprovider"
-121-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:45:13-88
+121-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:45:13-88
 122            android:exported="false"
-122-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:46:13-37
+122-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:46:13-37
 123            android:initOrder="99" />
-123-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:47:13-35
+123-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:47:13-35
 124
 125        <activity
-125-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:16:9-20:47
+125-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:16:9-20:47
 126            android:name="com.pichillilorenzo.flutter_inappwebview.in_app_browser.InAppBrowserActivity"
-126-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:17:13-104
+126-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:17:13-104
 127            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density"
-127-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:18:13-137
+127-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:18:13-137
 128            android:exported="false"
-128-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:19:13-37
+128-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:19:13-37
 129            android:theme="@style/AppTheme" />
-129-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:20:13-44
+129-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:20:13-44
 130        <activity
-130-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:21:9-24:55
+130-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:21:9-24:55
 131            android:name="com.pichillilorenzo.flutter_inappwebview.chrome_custom_tabs.ChromeCustomTabsActivity"
-131-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:22:13-112
+131-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:22:13-112
 132            android:exported="false"
-132-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:23:13-37
+132-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:23:13-37
 133            android:theme="@style/ThemeTransparent" />
-133-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:24:13-52
+133-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:24:13-52
 134        <activity
-134-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:25:9-28:55
+134-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:25:9-28:55
 135            android:name="com.pichillilorenzo.flutter_inappwebview.chrome_custom_tabs.TrustedWebActivity"
-135-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:26:13-106
+135-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:26:13-106
 136            android:exported="false"
-136-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:27:13-37
+136-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:27:13-37
 137            android:theme="@style/ThemeTransparent" />
-137-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:28:13-52
+137-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:28:13-52
 138        <activity
-138-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:29:9-33:55
+138-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:29:9-33:55
 139            android:name="com.pichillilorenzo.flutter_inappwebview.chrome_custom_tabs.ChromeCustomTabsActivitySingleInstance"
-139-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:30:13-126
+139-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:30:13-126
 140            android:exported="false"
-140-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:31:13-37
+140-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:31:13-37
 141            android:launchMode="singleInstance"
-141-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:32:13-48
+141-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:32:13-48
 142            android:theme="@style/ThemeTransparent" />
-142-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:33:13-52
+142-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:33:13-52
 143        <activity
-143-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:34:9-38:55
+143-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:34:9-38:55
 144            android:name="com.pichillilorenzo.flutter_inappwebview.chrome_custom_tabs.TrustedWebActivitySingleInstance"
-144-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:35:13-120
+144-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:35:13-120
 145            android:exported="false"
-145-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:36:13-37
+145-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:36:13-37
 146            android:launchMode="singleInstance"
-146-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:37:13-48
+146-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:37:13-48
 147            android:theme="@style/ThemeTransparent" />
-147-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:38:13-52
+147-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:38:13-52
 148
 149        <receiver
-149-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:40:9-43:40
+149-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:40:9-43:40
 150            android:name="com.pichillilorenzo.flutter_inappwebview.chrome_custom_tabs.ActionBroadcastReceiver"
-150-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:41:13-111
+150-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:41:13-111
 151            android:enabled="true"
-151-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:42:13-35
+151-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:42:13-35
 152            android:exported="false" />
-152-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:43:13-37
+152-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:43:13-37
 153
 154        <meta-data
-154-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:45:9-47:36
+154-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:45:9-47:36
 155            android:name="io.flutter.embedded_views_preview"
-155-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:46:13-61
+155-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:46:13-61
 156            android:value="true" />
-156-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:47:13-33
+156-->[:flutter_inappwebview] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:47:13-33
 157
 158        <receiver
-158-->[:flutter_local_notifications] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:16:9-18:40
+158-->[:flutter_local_notifications] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:16:9-18:40
 159            android:name="com.dexterous.flutterlocalnotifications.ActionBroadcastReceiver"
-159-->[:flutter_local_notifications] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:17:13-91
+159-->[:flutter_local_notifications] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:17:13-91
 160            android:exported="false" />
-160-->[:flutter_local_notifications] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:18:13-37
+160-->[:flutter_local_notifications] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:18:13-37
 161        <receiver
-161-->[:flutter_local_notifications] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:19:9-21:40
+161-->[:flutter_local_notifications] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:19:9-21:40
 162            android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationReceiver"
-162-->[:flutter_local_notifications] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:20:13-97
+162-->[:flutter_local_notifications] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:20:13-97
 163            android:exported="false" />
-163-->[:flutter_local_notifications] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:21:13-37
+163-->[:flutter_local_notifications] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:21:13-37
 164        <receiver
-164-->[:flutter_local_notifications] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:22:9-31:20
+164-->[:flutter_local_notifications] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:22:9-31:20
 165            android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationBootReceiver"
-165-->[:flutter_local_notifications] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:23:13-101
+165-->[:flutter_local_notifications] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:23:13-101
 166            android:exported="false" >
-166-->[:flutter_local_notifications] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:24:13-37
+166-->[:flutter_local_notifications] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:24:13-37
 167            <intent-filter>
-167-->[:flutter_local_notifications] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:25:13-30:29
+167-->[:flutter_local_notifications] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:25:13-30:29
 168                <action android:name="android.intent.action.BOOT_COMPLETED" />
-168-->[:flutter_local_notifications] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:26:17-79
-168-->[:flutter_local_notifications] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:26:25-76
+168-->[:flutter_local_notifications] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:26:17-79
+168-->[:flutter_local_notifications] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:26:25-76
 169                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
-169-->[:flutter_local_notifications] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:27:17-84
-169-->[:flutter_local_notifications] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:27:25-81
+169-->[:flutter_local_notifications] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:27:17-84
+169-->[:flutter_local_notifications] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:27:25-81
 170                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
-170-->[:flutter_local_notifications] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:28:17-82
-170-->[:flutter_local_notifications] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:28:25-79
+170-->[:flutter_local_notifications] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:28:17-82
+170-->[:flutter_local_notifications] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:28:25-79
 171                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON" />
-171-->[:flutter_local_notifications] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:29:17-82
-171-->[:flutter_local_notifications] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:29:25-79
+171-->[:flutter_local_notifications] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:29:17-82
+171-->[:flutter_local_notifications] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:29:25-79
 172            </intent-filter>
 173        </receiver>
 174
 175        <activity
-175-->[:url_launcher_android] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-13:74
+175-->[:url_launcher_android] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-13:74
 176            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
-176-->[:url_launcher_android] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-74
+176-->[:url_launcher_android] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-74
 177            android:exported="false"
-177-->[:url_launcher_android] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-37
+177-->[:url_launcher_android] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-37
 178            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
-178-->[:url_launcher_android] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-71
+178-->[:url_launcher_android] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-71
 179
 180        <uses-library
 180-->[androidx.window:window:1.0.0-beta04] /Users/www.abcom.in/.gradle/caches/transforms-3/e1f53c96aa78f7b42431169b7cd59214/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
@@ -343,10 +343,10 @@
 205            android:permission="com.google.android.c2dm.permission.SEND" >
 205-->[com.google.firebase:firebase-messaging:23.2.0] /Users/www.abcom.in/.gradle/caches/transforms-3/86fdbf54bf9c9df9cfa1572fa88873ef/transformed/jetified-firebase-messaging-23.2.0/AndroidManifest.xml:34:13-73
 206            <intent-filter>
-206-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:32:13-34:29
+206-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:32:13-34:29
 207                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-207-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:33:17-81
-207-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:33:25-78
+207-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:33:17-81
+207-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:33:25-78
 208            </intent-filter>
 209        </receiver>
 210        <!--
@@ -362,10 +362,10 @@
 217            android:exported="false" >
 217-->[com.google.firebase:firebase-messaging:23.2.0] /Users/www.abcom.in/.gradle/caches/transforms-3/86fdbf54bf9c9df9cfa1572fa88873ef/transformed/jetified-firebase-messaging-23.2.0/AndroidManifest.xml:47:13-37
 218            <intent-filter android:priority="-500" >
-218-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:23:13-25:29
+218-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:23:13-25:29
 219                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-219-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:24:17-78
-219-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:24:25-75
+219-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:24:17-78
+219-->[:firebase_messaging] /Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:24:25-75
 220            </intent-filter>
 221        </service>
 222

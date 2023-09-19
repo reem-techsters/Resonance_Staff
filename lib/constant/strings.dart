@@ -5,12 +5,13 @@ import 'package:flutter/material.dart';
 class Strings {
   static String url = "";
   static String welcome = "Welcome to Reso Bridge - Staff";
-  static Color ColorBlue = const Color.fromARGB(255, 76, 175, 147);
-  // static Color ColorBlue = const Color.fromRGBO(25, 130, 198, 1);
-  static Color ColorRed = const Color.fromRGBO(229, 76, 76, 1);
-  static Color ColorGreen = const Color.fromRGBO(193, 211, 38, 1);
+
+  static Color primaryColor = const Color.fromARGB(255, 76, 175, 147);
+  static Color colorRed = const Color.fromRGBO(229, 76, 76, 1);
+  static Color colorGreen = const Color.fromRGBO(193, 211, 38, 1);
   static Color bgColor = const Color.fromRGBO(230, 230, 230, 1);
   static Color bgColor_2 = const Color.fromRGBO(112, 112, 112, 1);
+  // static Color ColorBlue = const Color.fromRGBO(25, 130, 198, 1);
 
   static String loginField = "Enter Mail/Phone Number";
   static String loginFieldInvalid = "Invalid input";
@@ -20,14 +21,14 @@ class Strings {
   static String earlyLogout = "Early Logout";
   static String gatePass = "Gate Pass";
   static String bulkPass = "Bulk Pass";
+
   static String baseUrl = "http://maidendropgroup.com/public/api/";
   // static String baseUrl = "https://test.maidendropgroup.com/public/api/";
 
   static List<Map<String, String>> drawerRoutes = [
-     {"Today's Attendance": 'todayAttendance'},
+    {"Dashboard": 'todayAttendance'},
     {"Leaves": GetRoutes.pageAppliedLeaves},
     {"Approve Leaves": GetRoutes.pageApproveLeaves},
-    // {"Regularisation": GetRoutes.pageRegularisation},
     {"Reporting Employee": GetRoutes.pageReportingEmployee},
     {"My Attendance": GetRoutes.pageMyAttendance},
     {"Parent Concerns": GetRoutes.pageParentConcern},
@@ -70,11 +71,9 @@ class Strings {
     log('drawer to normal');
     drawerRoutes = [];
     drawerRoutes.addAll([
-      {"Today's Attendance": 'todayAttendance'},
+      {"Dashboard": 'todayAttendance'},
       {"Leaves": GetRoutes.pageAppliedLeaves},
       {"Approve Leaves": GetRoutes.pageApproveLeaves},
-      // {"Outside Work": GetRoutes.pageoutsidework},
-      // {"Regularisation": GetRoutes.pageRegularisation},
       {"Reporting Employee": GetRoutes.pageReportingEmployee},
       {"My Attendance": GetRoutes.pageMyAttendance},
       {"Parent Concerns": GetRoutes.pageParentConcern},
@@ -162,7 +161,7 @@ class Styles {
 
   static InputDecoration textInputBlue = InputDecoration(
     enabledBorder: OutlineInputBorder(
-        borderSide: BorderSide(color: Strings.ColorBlue, width: 2)),
+        borderSide: BorderSide(color: Strings.primaryColor, width: 2)),
     //icon of text field
     //label text of field
   );
@@ -180,13 +179,13 @@ class Styles {
           RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(100),
       )),
-      backgroundColor: MaterialStateProperty.all<Color>(Strings.ColorBlue));
+      backgroundColor: MaterialStateProperty.all<Color>(Strings.primaryColor));
 
   static ButtonStyle redButton = ButtonStyle(
-      backgroundColor: MaterialStateProperty.all<Color>(Strings.ColorRed));
+      backgroundColor: MaterialStateProperty.all<Color>(Strings.colorRed));
 
   static ButtonStyle blueButton = ButtonStyle(
-      backgroundColor: MaterialStateProperty.all<Color>(Strings.ColorBlue));
+      backgroundColor: MaterialStateProperty.all<Color>(Strings.primaryColor));
   static TextStyle latoButtonText =
       TextStyle(fontFamily: 'Lato', fontSize: 16, color: Colors.white);
 }

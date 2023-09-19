@@ -22,7 +22,7 @@ class CustomTextField {
           disabledBorder: OutlineInputBorder(
               borderSide: BorderSide(color: Colors.grey.shade400, width: 2)),
           focusedBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: Strings.ColorBlue, width: 2),
+            borderSide: BorderSide(color: Strings.primaryColor, width: 2),
           ),
           errorBorder: OutlineInputBorder(
             borderSide: BorderSide(
@@ -40,7 +40,7 @@ class CustomTextField {
         maxLines: 10,
         decoration: Styles.textInputBlue.copyWith(
           focusedBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Strings.ColorBlue, width: 2)),
+              borderSide: BorderSide(color: Strings.primaryColor, width: 2)),
           hintText: "  Enter Reason",
           // hintStyle: TextStyle(color: Colors.black),
           contentPadding: EdgeInsets.fromLTRB(20, 20, 0, 0),
