@@ -17,6 +17,41 @@ class GatePassController extends GetxController {
     stateGatePassRequestModel.add(obj);
   }
 
+  TextEditingController searchCtrl = TextEditingController();
+  // List<dynamic> searchData = [];
+  // List<Data> gatepassList = [];
+
+  bool showLoader = true;
+
+  // getSearchResult(String value) {
+  //   log('getSearchResult GATEPASS');
+  //   searchData.clear();
+  //   for (var i in gatepassList) {
+  //     if (i.name.toString().toLowerCase().contains(value.toLowerCase()) ||
+  //         i.gaurdian.toString().toLowerCase().contains(value.toLowerCase())) {
+  //       Data data = Data(
+  //         formrequestid: i.formrequestid,
+  //         approveddate: i.approveddate,
+  //         approvedby: i.approvedby,
+  //         status: i.status,
+  //         createdtimestamp: i.createdtimestamp,
+  //         updatedtimestamp: i.updatedtimestamp,
+  //         name: i.name,
+  //         purpose: i.purpose,
+  //         toDate: i.toDate,
+  //         fromDate: i.fromDate,
+  //         gaurdian: i.gaurdian,
+  //         indata: i.indata,
+  //         updatedby: i.updatedby,
+  //       );
+  //       update();
+  //       searchData.add(data);
+  //       update();
+  //       log(searchData.toString());
+  //     }
+  //   }
+  // }
+
 //---------------------------------------------*IN-TIME VALIDATION
   inTimeValidation(String? value) {
     if (value!.isEmpty) {
@@ -37,7 +72,7 @@ class GatePassController extends GetxController {
       if (res.statusCode == 201) {
         var body = res.body;
         final decodedbody = jsonDecode(body);
-        print(" ${decodedbody["status"]}");
+        print(" stat --> ${decodedbody["status"]}");
         log(" GATEPASS CTRL ---$body");
 
         if (decodedbody["status"]) {
@@ -45,6 +80,9 @@ class GatePassController extends GetxController {
           GatePassModel userData = gatePassModelFromJson(body.toString());
           print(userData.data.first.name);
           await updateGatePassModel(userData);
+          // gatepassList = userData.data;
+          update();
+          // log('mmmm --> ${gatepassList[0].name.toString()}');
           return true;
         } else {
           CustomSnackBar.atBottom(

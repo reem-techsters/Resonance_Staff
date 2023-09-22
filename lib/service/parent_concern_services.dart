@@ -12,7 +12,8 @@ class ParentConcernService {
       log('userrr-->${userid.toString()}');
       final response = await http.get(Uri.parse(
           //userid
-          '${Strings.baseUrl}Studentconcerns?branchid=$userid'));
+          '${Strings.baseUrl}Studentconcerns?userid=$userid'));
+          log('url parent -->${Strings.baseUrl}Studentconcerns?userid=$userid');
       log('response --> \n ${response.body}');
 
       if (response.statusCode >= 200 && response.statusCode <= 299) {
@@ -47,10 +48,10 @@ class ParentConcernService {
   }
 
 //--------------------------------------------------*Sending status (In Progress --> Resolved)
-  Future<int?> getResolvedList(int studentId, int id) async {
+  Future<int?> getResolvedList(int studentId, int id,String comments) async {
     try {
       final response = await http.get(Uri.parse(
-          '${Strings.baseUrl}concern_status_changed?student_id=$studentId&id=$id'));
+          '${Strings.baseUrl}concern_status_changed?student_id=$studentId&id=$id&comments=$comments'));
 
       log('response --> \n ${response.body}');
 

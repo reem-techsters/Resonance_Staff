@@ -23,7 +23,7 @@ class LeaveRequestController extends GetxController {
       var body = res.body;
       final decodedbody = jsonDecode(body);
       print(" ${decodedbody["status"]}");
-      print(" ---$body");
+      print("getLeaveRequestModel ---$body");
 
       if (decodedbody["status"]) {
         //UserModel userData = UserModel(data: body["data"],status: body["status"],message: body["message"]).fromJson;

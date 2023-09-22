@@ -196,8 +196,7 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                                       Expanded(
                                         child: Container(
                                           decoration: BoxDecoration(
-                                              color: const Color.fromARGB(
-                                                  255, 76, 175, 147),
+                                              color: Strings.primaryColor,
                                               borderRadius: BorderRadius.only(
                                                 topRight: Radius.circular(30),
                                                 topLeft: Radius.circular(30),
@@ -319,7 +318,7 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
     return Card(
       shadowColor: Colors.black,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
-      color: index == 1 ? Color.fromARGB(255, 76, 175, 147) : Colors.white,
+      color: index == 1 ? Strings.primaryColor : Colors.white,
       child: SizedBox(
         width: width / 2.35,
         // height: visible ? height / 4.7 + 50 : height / 4.7,
@@ -346,11 +345,11 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                     child: Text(
                       title!,
                       style: Styles.poppinsBold.copyWith(
-                          fontSize: 20,
+                          fontSize: 18,
                           color: index == 1 ? Colors.white : Colors.black),
                     ),
                   ), //Text
-                  CustomRichText.customRichText("", data!,
+                  CustomRichText.customRichText('', data!,
                       colorindex: index == 1 ? 1 : 0),
                   // Spacer(), //Text
                   // Visibility(
@@ -560,7 +559,7 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
         position: badges.BadgePosition.topEnd(),
         child: Obx(() => attendanceCard(
               context,
-              // visible: myAttendanceModelCtrl
+              //  visible: myAttendanceModelCtrl
               //         .stateMyAttendanceModel.last.data[0].isEarlyLogout ==
               //     "1",
               icon: myAttendanceModelCtrl
@@ -575,16 +574,12 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                   ? "Early ${Strings.logout}"
                   : Strings.logout,
               data: myAttendanceModelCtrl
-                          .stateMyAttendanceModel.last.data[0].status ==
-                      "1"
-                  ? "Present"
+                          .stateMyAttendanceModel.last.data[0].logoutTime ==
+                      "null"
+                  ? "----"
                   : myAttendanceModelCtrl
-                              .stateMyAttendanceModel.last.data[0].status ==
-                          "0"
-                      ? "Absent"
-                      : myAttendanceModelCtrl
-                          .stateMyAttendanceModel.last.data[0].logoutTime
-                          .split(" ")[1],
+                      .stateMyAttendanceModel.last.data[0].logoutTime
+                      .split(" ")[1],
               index: 2,
             ))));
   }
@@ -596,80 +591,87 @@ class UserInfoCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 12, top: 8.0),
+      padding: const EdgeInsets.only(left: 12.0, top: 8.0),
       child: Stack(
         children: [
-          Card(
-            elevation: 0.0,
-            color: Colors.transparent,
-            child: Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    height: 84,
-                    width: MediaQuery.of(context).size.width * 0.82,
-                    padding: EdgeInsets.all(20),
-                    decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 250, 252, 250),
-                      borderRadius: BorderRadius.circular(10),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(0.3),
-                          spreadRadius: 5,
-                          blurRadius: 7,
-                          offset: Offset(0, 3),
+          Padding(
+            padding: const EdgeInsets.only(left: 5.0, right: 5.0),
+            child: Card(
+              elevation: 0.0,
+              color: Colors.transparent,
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Expanded(
+                      flex: 2, // Adjust the flex value as needed
+                      child: Container(
+                        padding: EdgeInsets.all(20),
+                        decoration: BoxDecoration(
+                          color: Color.fromARGB(255, 250, 252, 250),
+                          borderRadius: BorderRadius.circular(10),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(0.3),
+                              spreadRadius: 5,
+                              blurRadius: 7,
+                              offset: Offset(0, 3),
+                            ),
+                          ],
                         ),
-                      ],
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 30.0),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            GetUserData().getUserName().toUpperCase(),
-                            style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black,
-                            ),
-                          ),
-                          RichText(
-                            text: TextSpan(
-                              style: DefaultTextStyle.of(context).style,
-                              children: <TextSpan>[
-                                TextSpan(
-                                  text: 'Designation: ',
-                                  style: TextStyle(fontSize: 12),
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 30.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                GetUserData().getUserName().toUpperCase(),
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black,
                                 ),
-                                TextSpan(
-                                  text: GetUserData()
-                                      .getCurrentUser()
-                                      .designation
-                                      .toString(),
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black,
-                                  ),
+                              ),
+                              RichText(
+                                text: TextSpan(
+                                  style: DefaultTextStyle.of(context).style,
+                                  children: <TextSpan>[
+                                    TextSpan(
+                                      text: 'Designation: ',
+                                      style: TextStyle(fontSize: 12),
+                                    ),
+                                    TextSpan(
+                                      text: GetUserData()
+                                          .getCurrentUser()
+                                          .designation
+                                          .toString(),
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.black,
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                              ],
-                            ),
+                              ),
+                            ],
                           ),
-                        ],
+                        ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ),
           Align(
             alignment: Alignment.centerLeft,
             child: Padding(
-              padding: const EdgeInsets.only(left: 8, top: 35),
+              padding: const EdgeInsets.only(
+                left: 4.0,
+                top: 35.0,
+              ),
               child: CircleAvatar(
                 backgroundColor: Color.fromARGB(255, 235, 232, 232),
                 radius: 30,
@@ -677,8 +679,8 @@ class UserInfoCard extends StatelessWidget {
                   borderRadius: BorderRadius.circular(50),
                   child: Image.asset(
                     "assets/icon/employee_icon.png",
-                    width: 70,
-                    height: 70,
+                    width: 60,
+                    height: 60,
                     fit: BoxFit.cover,
                   ),
                 ),

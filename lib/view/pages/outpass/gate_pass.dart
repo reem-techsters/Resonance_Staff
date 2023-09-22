@@ -2,6 +2,7 @@ import 'package:attendance/constant/dateformat.dart';
 import 'package:attendance/controller/model_state/user_model_ctrl.dart';
 import 'package:attendance/view/pages/outpass/apply_bulk_pass.dart';
 import 'package:attendance/view/pages/outpass/apply_pass.dart';
+import 'package:attendance/view/pages/search_screen.dart';
 import 'package:attendance/view/widgets/intime_widget.dart';
 import 'package:attendance/view/widgets/preLoader.dart';
 import 'package:flutter/material.dart';
@@ -103,6 +104,37 @@ class _GatePassState extends State<GatePass> {
                                   ))
                             ]),
                       ),
+                      // Padding(
+                      //   padding: const EdgeInsets.only(left: 8.0, right: 8.0),
+                      //   child: GetBuilder<GatePassController>(
+                      //       init: GatePassController(),
+                      //       builder: (controller) {
+                      //         return InkWell(
+                      //           onTap: () {
+                      //             gatePassRequestCtrl.searchData.clear();
+                      //             gatePassRequestCtrl.searchCtrl.clear();
+                      //             Navigator.of(context).push(MaterialPageRoute(
+                      //               builder: (context) => SearchScreen(
+                      //                   userModelCtrl: UserModelCtrl,
+                      //                   controller: controller,
+                      //                   title: 'Gate Pass'),
+                      //             ));
+                      //           },
+                      //           child: TextFormField(
+                      //             enabled: false,
+                      //             decoration: InputDecoration(
+                      //               border: OutlineInputBorder(
+                      //                   borderRadius:
+                      //                       BorderRadius.circular(30)),
+                      //               hintText: 'Search',
+                      //               prefixIcon: Icon(Icons.search),
+                      //               contentPadding:
+                      //                   EdgeInsets.symmetric(vertical: 8),
+                      //             ),
+                      //           ),
+                      //         );
+                      //       }),
+                      // ),
                       FutureBuilder(
                           future: getLeaveRequest,
                           builder: (context, snapshot) {
@@ -298,3 +330,60 @@ class _GatePassState extends State<GatePass> {
     ]);
   }
 }
+
+// class GatePassButtons extends StatelessWidget {
+//   final GatePassController gatePassRequestCtrl;
+//   final UserModelController UserModelCtrl;
+//   // final Future<bool> getLeaveRequest;
+//   final int i;
+//   const GatePassButtons({
+//     super.key,
+//     required this.gatePassRequestCtrl,
+//     required this.i,
+//     required this.UserModelCtrl,
+//     // required this.getLeaveRequest,
+//   });
+
+//   @override
+//   Widget build(BuildContext context) {
+//     late Future<bool> getLeaveRequest;
+//     return Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+//       ElevatedButton(
+//         onPressed: () async {
+//           await ApproveGatePass(
+//                   approveform: "approved",
+//                   formreqid: gatePassRequestCtrl
+//                       .stateGatePassRequestModel.last.data[i].formrequestid
+//                       .toString(),
+//                   userid: UserModelCtrl.getUserId())
+//               .callApi(context);
+
+//           // setState(() {
+//           getLeaveRequest = gatePassRequestCtrl.getGatePassModel(
+//               UserModelCtrl.getUserId(), UserModelCtrl.getBranchId());
+//           // });
+//         },
+//         style: Styles.blueButton,
+//         child: Text(style: Styles.latoButtonText, "Accept"),
+//       ),
+//       SizedBox(width: Strings.width(context) / 10),
+//       ElevatedButton(
+//         onPressed: () async {
+//           await ApproveGatePass(
+//                   approveform: "rejected",
+//                   formreqid: gatePassRequestCtrl
+//                       .stateGatePassRequestModel.last.data[i].formrequestid
+//                       .toString(),
+//                   userid: UserModelCtrl.getUserId())
+//               .callApi(context);
+//           // setState(() {
+//           getLeaveRequest = gatePassRequestCtrl.getGatePassModel(
+//               UserModelCtrl.getUserId(), UserModelCtrl.getBranchId());
+//           // });
+//         },
+//         style: Styles.redButton,
+//         child: Text(style: Styles.latoButtonText, "   Reject   "),
+//       )
+//     ]);
+//   }
+// }

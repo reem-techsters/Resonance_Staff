@@ -1,5 +1,6 @@
 import 'package:attendance/controller/model_state/parent_concern_controller.dart';
 import 'package:attendance/utils/get_user_id.dart';
+import 'package:attendance/view/pages/search_screen.dart';
 import 'package:attendance/view/widgets/custom_appbar.dart';
 import 'package:attendance/view/widgets/custom_drawer.dart';
 import 'package:attendance/view/widgets/custom_error.dart';
@@ -19,7 +20,7 @@ class _ParentConcernScreenState extends State<ParentConcernScreen> {
   final ParentConcernGetx controller = Get.put(ParentConcernGetx());
   @override
   void initState() {
-    ParentConcernGetx().loadresources(true);
+    ParentConcernGetx().loadresources();
     ParentConcernGetx().callParentConcernList(
         int.parse(GetUserData().getCurrentUser().userid));
     super.initState();
@@ -36,7 +37,7 @@ class _ParentConcernScreenState extends State<ParentConcernScreen> {
           builder: (controller) {
             return RefreshIndicator(
               onRefresh: () async {
-                await controller.loadresources(true);
+                await controller.loadresources();
               },
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -51,19 +52,52 @@ class _ParentConcernScreenState extends State<ParentConcernScreen> {
                               child: Expanded(
                                 child: Padding(
                                   padding: const EdgeInsets.all(12.0),
-                                  child: ListView.builder(
-                                    shrinkWrap: true,
-                                    itemCount:
-                                        controller.parentConcernlist.length,
-                                    itemBuilder: (context, index) {
-                                      final data =
-                                          controller.parentConcernlist[index];
-                                      return ParentConcernCardWidget(
-                                        index: index,
-                                        data: data,
-                                        controller: controller,
-                                      );
-                                    },
+                                  child: SingleChildScrollView(
+                                    child: Column(
+                                      children: [
+                                        InkWell(
+                                          onTap: () {
+                                            controller.searchData.clear();
+                                            controller.searchCtrl.clear();
+                                            Navigator.of(context)
+                                                .push(MaterialPageRoute(
+                                              builder: (context) =>
+                                                  SearchScreen(
+                                                      title: 'Parent Concerns'),
+                                            ));
+                                          },
+                                          child: TextFormField(
+                                            enabled: false,
+                                            decoration: InputDecoration(
+                                              border: OutlineInputBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          30)),
+                                              hintText: 'Search',
+                                              prefixIcon: Icon(Icons.search),
+                                              contentPadding:
+                                                  EdgeInsets.symmetric(
+                                                      vertical: 8),
+                                            ),
+                                          ),
+                                        ),
+                                        SizedBox(height: 10.0),
+                                        ListView.builder(
+                                          shrinkWrap: true,
+                                          itemCount: controller
+                                              .parentConcernlist.length,
+                                          itemBuilder: (context, index) {
+                                            final data = controller
+                                                .parentConcernlist[index];
+                                            return ParentConcernCardWidget(
+                                              index: index,
+                                              data: data,
+                                              controller: controller,
+                                            );
+                                          },
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),

@@ -11,6 +11,13 @@ class Strings {
   static Color colorGreen = const Color.fromRGBO(193, 211, 38, 1);
   static Color bgColor = const Color.fromRGBO(230, 230, 230, 1);
   static Color bgColor_2 = const Color.fromRGBO(112, 112, 112, 1);
+  // static Color primaryColor = Color(0xFFCD6155);
+  // Color(0xFF34495E);
+  // static Color primaryColor =Color.fromARGB(255, 200, 219, 81);
+  // teal --> Color(0xFF48C9B0);
+  // blue --> Color(0xFF5DADE2);
+  // reddish --> Color(0xFFCD6155);
+
   // static Color ColorBlue = const Color.fromRGBO(25, 130, 198, 1);
 
   static String loginField = "Enter Mail/Phone Number";

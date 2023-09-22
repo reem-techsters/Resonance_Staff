@@ -3,6 +3,7 @@ import 'package:attendance/model/parent_concern_model.dart';
 import 'package:attendance/service/parent_concern_services.dart';
 import 'package:attendance/utils/get_user_id.dart';
 import 'package:attendance/view/widgets/custom_snackbar.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class ParentConcernGetx extends GetxController {
@@ -12,11 +13,49 @@ class ParentConcernGetx extends GetxController {
     await callParentConcernList(
         int.parse(GetUserData().getCurrentUser().userid));
     log('userid --> ${GetUserData().getCurrentUser().userid}');
+    getSearchResult(searchCtrl.text);
   }
 
+  TextEditingController searchCtrl = TextEditingController();
+  TextEditingController commentCtrl = TextEditingController();
   List<Datum> parentConcernlist = [];
+  List<dynamic> searchData = [];
 
   bool showLoader = true;
+
+  getSearchResult(String value) {
+    searchData.clear();
+    for (var i in parentConcernlist) {
+      if (i.name.toString().toLowerCase().contains(value.toLowerCase()) ||
+          i.fathername.toString().toLowerCase().contains(value.toLowerCase()) ||
+          i.applicationnumber.toString().toLowerCase().contains(value.toLowerCase())) {
+        Datum data = Datum(
+          image: i.image,
+          categoryname: i.categoryname,
+          studentId: i.studentId,
+          concernId: i.concernId,
+          category: i.category,
+          subCategory: i.subCategory,
+          details: i.details,
+          fromTime: i.fromTime,
+          toTime: i.toTime,
+          status: i.status,
+          feedback: i.feedback,
+          feedbackreason: i.feedbackreason,
+          createdDate: i.createdDate,
+          subcategoryname: i.subCategory,
+          name: i.name,
+          applicationnumber: i.applicationnumber,
+          branchname: i.branchname,
+          fathername: i.fathername,
+        );
+        update();
+        searchData.add(data);
+        update();
+      }
+    }
+  }
+
   Future<void> callParentConcernList(int userid) async {
     Parent? response =
         await ParentConcernService().getParentConcernList(userid);
@@ -51,9 +90,9 @@ class ParentConcernGetx extends GetxController {
   }
 
 //--------------------------------------------------*Sending status (In Progress --> Resolved)
-  Future<void> callResolved(int studentid, int id) async {
+  Future<void> callResolved(int studentid, int id, String comments) async {
     int? response =
-        (await ParentConcernService().getResolvedList(studentid, id));
+        (await ParentConcernService().getResolvedList(studentid, id, comments));
     if (response != null) {
       if (response >= 200 && response <= 299) {
         CustomSnackBar.atBottom(title: "STATUS", body: "Success");
@@ -66,7 +105,7 @@ class ParentConcernGetx extends GetxController {
   }
 
   //-------------------------------------------------------*Refresh Loader
-  Future<void> loadresources(bool reload) async {
+  Future<void> loadresources() async {
     Get.put(ParentConcernGetx());
 
     await Get.find<ParentConcernGetx>().callParentConcernList(

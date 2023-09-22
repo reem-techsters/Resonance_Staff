@@ -42,6 +42,10 @@ class Datum {
   String? createdDate;
   String? categoryname;
   String? subcategoryname;
+  String? name;
+  String? applicationnumber;
+  String? branchname;
+  String? fathername;
 
   Datum({
     this.id,
@@ -59,6 +63,10 @@ class Datum {
     this.createdDate,
     this.categoryname,
     this.subcategoryname,
+    this.name,
+    this.applicationnumber,
+    this.branchname,
+    this.fathername,
   });
 
   factory Datum.fromJson(Map<String, dynamic> json) => Datum(
@@ -77,6 +85,10 @@ class Datum {
         createdDate: json["created_date"],
         categoryname: json["categoryname"],
         subcategoryname: json["subcategoryname"],
+        name: json["name"],
+        applicationnumber: json["applicationnumber"],
+        branchname: json["branchname"],
+        fathername: json["fathername"],
       );
 
   Map<String, dynamic> toJson() => {
@@ -95,6 +107,10 @@ class Datum {
         "created_date": createdDate,
         "categoryname": categoryname,
         "subcategoryname": subcategoryname,
+        "name": name,
+        "applicationnumber": applicationnumber,
+        "branchname": branchname,
+        "fathername": fathername
       };
 }
 

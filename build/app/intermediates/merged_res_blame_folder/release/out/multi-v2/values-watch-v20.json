@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/app/intermediates/incremental/mergeReleaseResources/merged.dir/values-watch-v20/values-watch-v20.xml",
+            "outputFile": "/Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendence_two/attendence/build/app/intermediates/incremental/mergeReleaseResources/merged.dir/values-watch-v20/values-watch-v20.xml",
             "map": [
                 {
                     "source": "/Users/www.abcom.in/.gradle/caches/transforms-3/295557e222aa376ac1fd7f3fea7f8a00/transformed/jetified-play-services-auth-20.4.0/res/values-watch-v20/values.xml",

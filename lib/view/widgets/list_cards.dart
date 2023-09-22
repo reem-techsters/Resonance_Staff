@@ -4,6 +4,7 @@ import 'package:attendance/controller/model_state/my_attendance_ctrl.dart';
 import 'package:attendance/controller/model_state/parent_concern_controller.dart';
 import 'package:attendance/model/parent_concern_model.dart';
 import 'package:attendance/utils/get_user_id.dart';
+import 'package:attendance/view/widgets/custom_snackbar.dart';
 import 'package:attendance/view/widgets/richText.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
@@ -35,17 +36,25 @@ class ParentConcernCardWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 CustomRichText.customRichText(
+                    "Application Number :", data!.applicationnumber.toString()),
+                CustomRichText.customRichText(
+                    "Student Name :", data!.name.toString()),
+                CustomRichText.customRichText(
+                    "Father Name :", data!.fathername.toString()),
+                CustomRichText.customRichText(
+                    "Branch :", data!.branchname.toString()),
+                CustomRichText.customRichText(
                     "Concern id :", data!.concernId.toString()),
-                CustomRichText.customRichText(
-                    "Concerns :", data!.details.toString()),
-                CustomRichText.customRichText(
-                    "Raised on :", data!.createdDate!.split(' ')[0].toString()),
-                CustomRichText.customRichText("Prefered contact time :",
-                    '${data!.fromTime.toString()} - ${data!.toTime.toString()}'),
                 CustomRichText.customRichText(
                     textAlign: TextAlign.start,
                     "Category :",
                     '${data!.categoryname.toString()} > ${data!.subcategoryname.toString()}'),
+                CustomRichText.customRichText(
+                    "Description :", data!.details.toString()),
+                CustomRichText.customRichText(
+                    "Raised on :", data!.createdDate!.split(' ')[0].toString()),
+                CustomRichText.customRichText("Prefered contact time :",
+                    '${data!.fromTime.toString()} - ${data!.toTime.toString()}'),
                 data!.status == 'Re-Open'
                     ? Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -60,7 +69,7 @@ class ParentConcernCardWidget extends StatelessWidget {
                       )
                     : CustomRichText.customRichText(
                         "Status :", data!.status.toString()),
-                SizedBox(height: 10.0),
+                SizedBox(height: 8.0),
                 ParentConcernButtonWidget(
                   index: index,
                   controller: controller,
@@ -85,42 +94,68 @@ class ParentConcernButtonWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.end,
-      children: [
-        data!.status == 'Resolved'
-            ? Icon(Icons.check, color: Colors.green, size: 30.0)
-            : ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color.fromRGBO(25, 130, 198, 1)),
-                onPressed: () async {
-                  if (data!.status == 'Pending') {
-                    log('${data!.status} --> In Progress');
+    return Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+      data!.status == 'In Progress'
+          ? Expanded(
+              child: SizedBox(
+                height: 40,
+                child: TextFormField(
+                  controller: controller.commentCtrl,
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: 'Enter Comment',
+                      hintText: 'Comment',
+                      hintStyle: TextStyle(color: Colors.grey, fontSize: 13)),
+                ),
+              ),
+            )
+          : SizedBox(),
+      SizedBox(width: 10.0),
+      data!.status == 'Resolved'
+          ? Icon(Icons.check, color: Colors.green, size: 30.0)
+          : ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color.fromRGBO(25, 130, 198, 1)),
+              onPressed: () async {
+                if (data!.status == 'Pending') {
+                  log('${data!.status} --> In Progress');
 
-                    await controller.callInProgress(
-                        int.parse(data!.studentId!), int.parse(data!.id!));
+                  await controller.callInProgress(
+                      int.parse(data!.studentId!), int.parse(data!.id!));
 
-                    await controller.callParentConcernList(
-                        int.parse(GetUserData().getCurrentUser().branchid));
-                  } else if (data!.status == 'In Progress' ||
-                      data!.status == 'Re-Open') {
+                  await controller.callParentConcernList(
+                      int.parse(GetUserData().getCurrentUser().branchid));
+                  await controller.loadresources();
+                  ParentConcernGetx().callParentConcernList(
+                      int.parse(GetUserData().getCurrentUser().userid));
+                } else if (data!.status == 'In Progress' ||
+                    data!.status == 'Re-Open') {
+                  if (controller.commentCtrl.text.isNotEmpty) {
                     log('${data!.status} --> Resolved');
 
-                    await controller.callResolved(
-                        int.parse(data!.studentId!), int.parse(data!.id!));
+                    await controller.callResolved(int.parse(data!.studentId!),
+                        int.parse(data!.id!), controller.commentCtrl.text);
 
                     await controller.callParentConcernList(
                         int.parse(GetUserData().getCurrentUser().branchid));
+                    await controller.loadresources();
+                    ParentConcernGetx().callParentConcernList(
+                        int.parse(GetUserData().getCurrentUser().userid));
+                  } else {
+                    CustomSnackBar.atBottom(
+                        title: "Resolving Failed",
+                        body: "Please Enter Comments",
+                        status: false);
                   }
-                },
-                child: Text(data!.status == 'Pending'
-                    ? 'Mark as In Progress'
-                    : data!.status == 'In Progress' || data!.status == 'Re-Open'
-                        ? 'Mark as Resolved'
-                        : ''),
-              ),
-      ],
-    );
+                }
+              },
+              child: Text(data!.status == 'Pending'
+                  ? 'Mark as In Progress'
+                  : data!.status == 'In Progress' || data!.status == 'Re-Open'
+                      ? 'Mark as Resolved'
+                      : ''),
+            ),
+    ]);
   }
 }
 

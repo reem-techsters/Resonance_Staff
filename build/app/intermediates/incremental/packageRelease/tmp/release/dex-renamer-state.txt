@@ -1,4 +1,0 @@
-#Tue Sep 19 13:00:33 IST 2023
-base.0=/Users/www.abcom.in/Desktop/REEMS/June 6 -ess/attendance/attendance/build/app/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-path.0=classes.dex
-renamed.0=classes.dex

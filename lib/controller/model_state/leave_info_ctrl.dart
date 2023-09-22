@@ -19,7 +19,7 @@ class LeaveInfoController extends GetxController {
       var body = res.body;
       final decodedbody = jsonDecode(body);
       print(" ${decodedbody["status"]}");
-      print(" ---$body");
+      print("getLeaveInfoModel ---$body");
 
       if (decodedbody["status"]) {
         print(decodedbody["status"]);
