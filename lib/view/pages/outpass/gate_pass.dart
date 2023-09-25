@@ -2,7 +2,8 @@ import 'package:attendance/constant/dateformat.dart';
 import 'package:attendance/controller/model_state/user_model_ctrl.dart';
 import 'package:attendance/view/pages/outpass/apply_bulk_pass.dart';
 import 'package:attendance/view/pages/outpass/apply_pass.dart';
-import 'package:attendance/view/pages/search_screen.dart';
+import 'package:attendance/view/pages/outpass/gatepass_search.dart';
+import 'package:attendance/view/pages/parent_concerns/parentconcern_search.dart';
 import 'package:attendance/view/widgets/intime_widget.dart';
 import 'package:attendance/view/widgets/preLoader.dart';
 import 'package:flutter/material.dart';
@@ -104,37 +105,37 @@ class _GatePassState extends State<GatePass> {
                                   ))
                             ]),
                       ),
-                      // Padding(
-                      //   padding: const EdgeInsets.only(left: 8.0, right: 8.0),
-                      //   child: GetBuilder<GatePassController>(
-                      //       init: GatePassController(),
-                      //       builder: (controller) {
-                      //         return InkWell(
-                      //           onTap: () {
-                      //             gatePassRequestCtrl.searchData.clear();
-                      //             gatePassRequestCtrl.searchCtrl.clear();
-                      //             Navigator.of(context).push(MaterialPageRoute(
-                      //               builder: (context) => SearchScreen(
-                      //                   userModelCtrl: UserModelCtrl,
-                      //                   controller: controller,
-                      //                   title: 'Gate Pass'),
-                      //             ));
-                      //           },
-                      //           child: TextFormField(
-                      //             enabled: false,
-                      //             decoration: InputDecoration(
-                      //               border: OutlineInputBorder(
-                      //                   borderRadius:
-                      //                       BorderRadius.circular(30)),
-                      //               hintText: 'Search',
-                      //               prefixIcon: Icon(Icons.search),
-                      //               contentPadding:
-                      //                   EdgeInsets.symmetric(vertical: 8),
-                      //             ),
-                      //           ),
-                      //         );
-                      //       }),
-                      // ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 15.0, right: 15.0,top: 8.0),
+                        child: GetBuilder<GatePassController>(
+                            init: GatePassController(),
+                            builder: (controller) {
+                              return InkWell(
+                                onTap: () {
+                                  controller.searchData.clear();
+                                  controller.searchCtrl.clear();
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (context) =>
+                                        OutPassSearchSearchScreen(
+                                            userModelCtrl: UserModelCtrl,
+                                            title: 'Gate Pass'),
+                                  ));
+                                },
+                                child: TextFormField(
+                                  enabled: false,
+                                  decoration: InputDecoration(
+                                    border: OutlineInputBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(30)),
+                                    hintText: 'Search',
+                                    prefixIcon: Icon(Icons.search),
+                                    contentPadding:
+                                        EdgeInsets.symmetric(vertical: 8),
+                                  ),
+                                ),
+                              );
+                            }),
+                      ),
                       FutureBuilder(
                           future: getLeaveRequest,
                           builder: (context, snapshot) {
@@ -227,6 +228,8 @@ class _GatePassState extends State<GatePass> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              CustomRichText.customRichText(
+                  "Application Number :", data.applicationnumber.toString()),
               CustomRichText.customRichText(
                   "Student Name :", data.name.toString()),
               CustomRichText.customRichText(

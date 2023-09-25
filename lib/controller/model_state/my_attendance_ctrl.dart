@@ -26,6 +26,28 @@ class MyAttendanceModelController extends GetxController {
   List<OutsideWorkDatum> outsideWorkList = [];
   bool isloader = false;
 
+  TextEditingController searchCtrl = TextEditingController();
+  List<dynamic> searchData = [];
+  getSearchResult(String value) {
+    searchData.clear();
+    for (var i in outsideWorkList) {
+      if (i.name.toString().toLowerCase().contains(value.toLowerCase())) {
+        OutsideWorkDatum data = OutsideWorkDatum(
+          absenttype: i.absenttype,
+          absentregularised: i.absentregularised,
+          absentReason: i.absentReason,
+          date: i.date,
+          attendanceId: i.attendanceId,
+          employeeId: i.employeeId,
+          name: i.name,
+        );
+        update();
+        searchData.add(data);
+        update();
+      }
+    }
+  }
+
   Future<void> outsideWorkApproveOrReject(
       BuildContext context, dynamic status) async {
     await AbsentService().outsideWorkApproveOrReject(context, status);

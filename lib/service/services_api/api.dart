@@ -633,6 +633,7 @@ class LeaveRequestApi {
   Future<http.Response> callApi() async {
     String url =
         "${Strings.baseUrl}Leaverequests?userid=$userid&branchid=$branchId";
+    log(url);
     try {
       http.Response res = await http.get(Uri.parse(url));
       print("verify api called ${res.statusCode}");
@@ -657,6 +658,7 @@ class GateOutApi {
   Future<http.Response> callApi() async {
     String url =
         "${Strings.baseUrl}studentoutpass?userid=$userid&branchid=$branchId";
+        log(url);
     try {
       http.Response res = await http.get(Uri.parse(url));
       print("verify api called ${res.statusCode}");

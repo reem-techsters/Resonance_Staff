@@ -1,4 +1,6 @@
 import 'dart:convert';
+import 'dart:developer';
+import 'package:attendance/controller/model_state/email_login_ctrl.dart';
 import 'package:attendance/controller/model_state/getotp_controller.dart';
 import 'package:attendance/controller/model_state/user_model_ctrl.dart';
 import 'package:attendance/controller/widget_state/login_tabbar_getx.dart';
@@ -322,7 +324,7 @@ class _LoginState extends State<Login> with SingleTickerProviderStateMixin {
 }
 
 //-----------------------------------------------------------------*Email Authentication
-class EmailAuth extends StatelessWidget {
+class EmailAuth extends StatefulWidget {
   const EmailAuth({
     super.key,
     required this.loginCtrl,
@@ -335,47 +337,112 @@ class EmailAuth extends StatelessWidget {
   final TextEditingController passwordCtrl;
 
   @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        WidgetTextFormField(ctrl: emailCtrl, hinttext: 'Email'),
-        WidgetTextFormField(ctrl: passwordCtrl, hinttext: 'Password'),
-        Buttons.blueButtonRounded(
-          "Login",
-          () {},
-        ),
-        SizedBox(height: 30.0),
-        TextButton(
-            style: TextButton.styleFrom(
-              splashFactory: NoSplash.splashFactory,
-              shadowColor: Colors.transparent,
-              backgroundColor: Colors.transparent,
-            ),
-            onPressed: () {
-              Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) => RegisterScreen(),
-              ));
-            },
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  "Guest? ",
-                  style: TextStyle(color: Colors.grey.shade600),
-                ),
-                Text(
-                  'Register here',
-                  style: TextStyle(
-                    decoration: TextDecoration.underline,
-                  ),
-                ),
-              ],
-            ))
-      ],
-    );
-  }
+  State<EmailAuth> createState() => _EmailAuthState();
 }
 
+bool isTextObscured = true;
+
+class _EmailAuthState extends State<EmailAuth> {
+  // @override
+  @override
+  Widget build(BuildContext context) {
+    return GetBuilder<EmailGetx>(
+        init: EmailGetx(),
+        builder: (controller) {
+          return Form(
+            key: controller.emailformkey,
+            child: Column(
+              children: [
+                WidgetTextFormField(
+                  ctrl: widget.emailCtrl,
+                  hinttext: 'Email',
+                  validator: (value) => controller.textFormValidation(value),
+                ),
+                Padding(
+                  padding:
+                      EdgeInsets.only(bottom: 20.0, left: 40.0, right: 40.0),
+                  child: TextFormField(
+                    textAlign: TextAlign.left,
+                    validator: (value) {
+                      controller.textFormValidation(value);
+                    },
+                    obscureText: isTextObscured == true ? true : false,
+                    style: TextStyle(
+                      fontFamily: 'Roboto',
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                    ),
+                    controller: widget.passwordCtrl,
+                    decoration: InputDecoration(
+                      suffixIcon: IconButton(
+                          onPressed: () {
+                            setState(() {
+                              isTextObscured = !isTextObscured;
+                            });
+                          },
+                          icon: isTextObscured == true
+                              ? Icon(Icons.visibility_off)
+                              : Icon(Icons.visibility)),
+                      filled: true,
+                      fillColor: Colors.white,
+                      hintText: 'Password',
+                      contentPadding: EdgeInsets.all(20.0),
+                      disabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide.none,
+                        borderRadius: BorderRadius.all(Radius.circular(40)),
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide.none,
+                        borderRadius: BorderRadius.all(Radius.circular(40)),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide.none,
+                        borderRadius: BorderRadius.all(Radius.circular(40)),
+                      ),
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(40))),
+                    ),
+                  ),
+                ),
+                Buttons.blueButtonRounded(
+                  "Login",
+                  () {
+                    controller.emailLogin(context);
+                  },
+                ),
+                SizedBox(height: 30.0),
+                TextButton(
+                    style: TextButton.styleFrom(
+                      splashFactory: NoSplash.splashFactory,
+                      shadowColor: Colors.transparent,
+                      backgroundColor: Colors.transparent,
+                    ),
+                    onPressed: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => RegisterScreen(),
+                      ));
+                    },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "Guest? ",
+                          style: TextStyle(color: Colors.grey.shade600),
+                        ),
+                        Text(
+                          'Register here',
+                          style: TextStyle(
+                            decoration: TextDecoration.underline,
+                          ),
+                        ),
+                      ],
+                    ))
+              ],
+            ),
+          );
+        });
+  }
+}
 
 //-----------------------------------------------------------------*Phone Authentication
 // class PhoneAuth extends StatefulWidget {

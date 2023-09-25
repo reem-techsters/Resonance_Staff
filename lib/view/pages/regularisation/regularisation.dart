@@ -3,6 +3,8 @@ import 'package:attendance/controller/model_state/reporting_employee_ctrl.dart';
 import 'package:attendance/controller/model_state/user_model_ctrl.dart';
 import 'package:attendance/model/all_reporting_emp_attendance_model.dart';
 import 'package:attendance/model/regularisation_model.dart';
+import 'package:attendance/view/pages/parent_concerns/parentconcern_search.dart';
+import 'package:attendance/view/pages/regularisation/regularise_search.dart';
 import 'package:attendance/view/widgets/regularisation_card.dart';
 import 'package:attendance/view/widgets/custom_appbar.dart';
 import 'package:attendance/view/widgets/custom_drawer.dart';
@@ -31,6 +33,8 @@ class _RegulaizationState extends State<Regulaization> {
   final logStateCtrl = Get.put(LogController());
   String selectedMonth = "Last 30 days";
 
+  List<ToRegularise> regulList = [];
+
   TextEditingController nullCtrl = TextEditingController();
   TextEditingController fromCtrl = TextEditingController();
   TextEditingController toCtrl = TextEditingController();
@@ -56,8 +60,10 @@ class _RegulaizationState extends State<Regulaization> {
                 reportingEmployeeCtrl.stateReportingEmployeeModel.last.data,
                 fromDate: "null",
                 toDate: "null");
-        getToRegulariseAttend =
-            ToRegularise.toRegulariseList(await allReportingEmpAttendanceModel);
+        getToRegulariseAttend = ToRegularise()
+            .toRegulariseList(await allReportingEmpAttendanceModel);
+        regulList = await ToRegularise()
+            .toRegulariseList(await allReportingEmpAttendanceModel);
         setState(() {
           loading = false;
         });
@@ -90,9 +96,7 @@ class _RegulaizationState extends State<Regulaization> {
                               color: Colors.white,
                               height: height / 20,
                               child: Row(children: [
-                                SizedBox(
-                                  width: 25,
-                                ),
+                                SizedBox(width: 25.0),
                                 !dateChanged
                                     ? Text(
                                         "Last 30 days",
@@ -117,10 +121,33 @@ class _RegulaizationState extends State<Regulaization> {
                                   width: 10,
                                 ),
                                 Text("Filter"),
-                                SizedBox(
-                                  width: 20,
-                                ),
+                                SizedBox(width: 20.0),
                               ]),
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(
+                              top: 15.0, left: 15.0, right: 15.0),
+                          child: InkWell(
+                            onTap: () {
+                              Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => RegulariseSearchScreen(
+                                  title: 'Regularise',
+                                  regulList: regulList,
+                                ),
+                              ));
+                            },
+                            child: TextFormField(
+                              enabled: false,
+                              decoration: InputDecoration(
+                                border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(30)),
+                                hintText: 'Search',
+                                prefixIcon: Icon(Icons.search),
+                                contentPadding:
+                                    EdgeInsets.symmetric(vertical: 8),
+                              ),
                             ),
                           ),
                         ),
@@ -158,7 +185,7 @@ class _RegulaizationState extends State<Regulaization> {
                                                             toDate: "null",
                                                             fromDate: "null");
                                                 getToRegulariseAttend =
-                                                    ToRegularise.toRegulariseList(
+                                                    ToRegularise().toRegulariseList(
                                                         await allReportingEmpAttendanceModel);
                                                 setState(() {
                                                   loading = false;
@@ -209,7 +236,7 @@ class _RegulaizationState extends State<Regulaization> {
       intialDate = value!;
 
       setState(() {
-        getToRegulariseAttend = ToRegularise.toRegulariseList(fun);
+        getToRegulariseAttend = ToRegularise().toRegulariseList(fun);
         if (!dateChanged) {
           dateChanged = true;
         }

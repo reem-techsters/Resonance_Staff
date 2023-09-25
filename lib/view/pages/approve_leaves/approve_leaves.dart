@@ -3,6 +3,7 @@ import 'package:attendance/constant/strings.dart';
 import 'package:attendance/controller/model_state/leave_request_ctrl.dart';
 import 'package:attendance/controller/model_state/user_model_ctrl.dart';
 import 'package:attendance/service/services_api/api.dart';
+import 'package:attendance/view/pages/approve_leaves/approveleaves_search.dart';
 import 'package:attendance/view/widgets/custom_appbar.dart';
 import 'package:attendance/view/widgets/custom_drawer.dart';
 import 'package:attendance/view/widgets/custom_error.dart';
@@ -42,6 +43,36 @@ class _ApproveLeavesState extends State<ApproveLeaves> {
             body:
                 Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
               CustomAppBar(Strings.approveLeave),
+              GetBuilder<LeaveRequestController>(
+                  init: LeaveRequestController(),
+                  builder: (controller) {
+                    return
+              Padding(
+                padding: const EdgeInsets.only(
+                    left: 15.0, right: 15.0, top: 15.0),
+                child: InkWell(
+                  onTap: () {
+                    controller.searchData.clear();
+                    controller.searchCtrl.clear();
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => ApproveLeaveSearchScreen(
+                          title: 'Approve Leaves',
+                          UserModelCtrl: UserModelCtrl),
+                    ));
+                  },
+                  child: TextFormField(
+                    enabled: false,
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(30)),
+                      hintText: 'Search',
+                      prefixIcon: Icon(Icons.search),
+                      contentPadding: EdgeInsets.symmetric(vertical: 8),
+                    ),
+                  ),
+                ),
+              );
+              }),
               FutureBuilder(
                   future: getLeaveRequest,
                   builder: (context, snapshot) {
@@ -50,7 +81,7 @@ class _ApproveLeavesState extends State<ApproveLeaves> {
                     } else if (snapshot.connectionState ==
                         ConnectionState.done) {
                       if (snapshot.hasError) {
-                        return Center(child: Text("No data available"));
+                        return Center(child: CustomError.noData());
                       } else if (snapshot.hasData) {
                         if (leaveRequestCtrl
                             .stateLeaveRequestModel.last.data.isNotEmpty) {
@@ -98,6 +129,14 @@ class _ApproveLeavesState extends State<ApproveLeaves> {
                 () => CustomRichText.customRichText(
                     "Employee Name : ",
                     leaveRequestCtrl.stateLeaveRequestModel.last.data[i].name
+                        .toString()
+                        .trim()),
+              ),
+              Obx(
+                () => CustomRichText.customRichText(
+                    "Employee id : ",
+                    leaveRequestCtrl
+                        .stateLeaveRequestModel.last.data[i].employeeid
                         .toString()
                         .trim()),
               ),

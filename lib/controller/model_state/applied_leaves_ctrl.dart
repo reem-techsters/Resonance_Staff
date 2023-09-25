@@ -1,12 +1,8 @@
 import 'dart:convert';
-
-import 'package:attendance/model/leave_request_model.dart';
 import 'package:get/get.dart';
 //import 'package:attendance/model/user_model.dart';
-
 import '../../model/applied_leave_model.dart';
 import '../../service/services_api/api.dart';
-import '../../model/my_attendance_model.dart';
 import '../../view/widgets/custom_snackbar.dart';
 
 class AppliedLeavesController extends GetxController {

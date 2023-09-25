@@ -16,19 +16,21 @@ class ParentConcernGetx extends GetxController {
     getSearchResult(searchCtrl.text);
   }
 
-  TextEditingController searchCtrl = TextEditingController();
   TextEditingController commentCtrl = TextEditingController();
   List<Datum> parentConcernlist = [];
-  List<dynamic> searchData = [];
 
   bool showLoader = true;
-
+  TextEditingController searchCtrl = TextEditingController();
+  List<dynamic> searchData = [];
   getSearchResult(String value) {
     searchData.clear();
     for (var i in parentConcernlist) {
       if (i.name.toString().toLowerCase().contains(value.toLowerCase()) ||
           i.fathername.toString().toLowerCase().contains(value.toLowerCase()) ||
-          i.applicationnumber.toString().toLowerCase().contains(value.toLowerCase())) {
+          i.applicationnumber
+              .toString()
+              .toLowerCase()
+              .contains(value.toLowerCase())) {
         Datum data = Datum(
           image: i.image,
           categoryname: i.categoryname,

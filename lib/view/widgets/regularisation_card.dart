@@ -29,10 +29,10 @@ class RegularisationCardWidget extends StatelessWidget {
                       ? "Late Login"
                       : "Early Logout"),
               CustomRichText.customRichText(
-                  "Employee Name :", dataList![index].name),
+                  "Employee Name :", dataList![index].name!),
               CustomRichText.customRichText(
                 "Date :",
-                dataList![index].date,
+                dataList![index].date!,
               ),
               dataList![index].loginregularised != "1" &&
                       dataList![index].loginregularised != "0"
@@ -41,7 +41,7 @@ class RegularisationCardWidget extends StatelessWidget {
                       children: [
                           CustomRichText.customRichText(
                               "Late Login ${Strings.reason} :",
-                              dataList![index].lateLoginReason),
+                              dataList![index].lateLoginReason!),
                           SizedBox(height: 10.0),
                           RegularisationButton(
                             index: index,
@@ -57,7 +57,7 @@ class RegularisationCardWidget extends StatelessWidget {
                       children: [
                         CustomRichText.customRichText(
                             "Early Logout ${Strings.reason} :",
-                            dataList![index].earlyLoginReason),
+                            dataList![index].earlyLoginReason!),
                         SizedBox(height: 10.0),
                         RegularisationButton(
                           index: index,

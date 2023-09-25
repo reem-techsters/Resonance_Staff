@@ -14,6 +14,10 @@ class WidgetTextFormField extends StatelessWidget {
   final double? leftandrightpadding;
   final TextStyle? textStyle;
   final FocusNode? focusNode;
+  final dynamic? suffixIconOnPressed;
+  final bool? suffixIconpresent;
+  final bool? isTextObscured;
+  final Widget? iconsuffix;
   const WidgetTextFormField(
       {super.key,
       required this.ctrl,
@@ -28,7 +32,11 @@ class WidgetTextFormField extends StatelessWidget {
       this.textStyle,
       this.maxLines,
       this.focusNode,
-      this.hardcodemaxLines});
+      this.hardcodemaxLines,
+      this.suffixIconOnPressed,
+      this.suffixIconpresent,
+      this.isTextObscured,
+      this.iconsuffix});
 
   @override
   Widget build(BuildContext context) {
@@ -54,6 +62,9 @@ class WidgetTextFormField extends StatelessWidget {
             ),
         controller: ctrl,
         decoration: InputDecoration(
+          suffixIcon: suffixIconpresent == true
+              ? IconButton(onPressed: suffixIconOnPressed, icon: iconsuffix!)
+              : null,
           filled: true,
           fillColor: Colors.white,
           hintText: hinttext,

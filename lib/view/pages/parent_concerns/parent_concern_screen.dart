@@ -1,6 +1,6 @@
 import 'package:attendance/controller/model_state/parent_concern_controller.dart';
 import 'package:attendance/utils/get_user_id.dart';
-import 'package:attendance/view/pages/search_screen.dart';
+import 'package:attendance/view/pages/parent_concerns/parentconcern_search.dart';
 import 'package:attendance/view/widgets/custom_appbar.dart';
 import 'package:attendance/view/widgets/custom_drawer.dart';
 import 'package:attendance/view/widgets/custom_error.dart';
@@ -62,7 +62,7 @@ class _ParentConcernScreenState extends State<ParentConcernScreen> {
                                             Navigator.of(context)
                                                 .push(MaterialPageRoute(
                                               builder: (context) =>
-                                                  SearchScreen(
+                                                  ParentConcernSearchScreen(
                                                       title: 'Parent Concerns'),
                                             ));
                                           },
@@ -83,6 +83,7 @@ class _ParentConcernScreenState extends State<ParentConcernScreen> {
                                         ),
                                         SizedBox(height: 10.0),
                                         ListView.builder(
+                                          physics: ClampingScrollPhysics(),
                                           shrinkWrap: true,
                                           itemCount: controller
                                               .parentConcernlist.length,

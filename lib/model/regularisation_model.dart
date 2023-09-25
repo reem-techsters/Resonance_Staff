@@ -1,3 +1,4 @@
+// import 'package:flutter/material.dart';
 import 'dart:developer';
 import 'my_attendance_model.dart';
 
@@ -7,41 +8,43 @@ class RegulaizationModel {
 }
 
 class ToRegularise {
-  String employeeid;
-  String name;
-  String branchid;
-  String inOut;
-  String uniid;
-  String inOutTime;
-  String attendanceId;
-  String date;
-  String reason;
-  String lateLoginReason;
-  String earlyLoginReason;
-  String loginregularised;
-  String logoutregularised;
-  String isLatelogin;
-  String isEarlyLogout;
+  String? employeeid;
+  String? name;
+  String? branchid;
+  String? inOut;
+  String? uniid;
+  String? inOutTime;
+  String? attendanceId;
+  String? date;
+  String? reason;
+  String? lateLoginReason;
+  String? earlyLoginReason;
+  String? loginregularised;
+  String? logoutregularised;
+  String? isLatelogin;
+  String? isEarlyLogout;
 
   ToRegularise({
-    required this.employeeid,
-    required this.name,
-    required this.branchid,
-    required this.inOut,
-    required this.uniid,
-    required this.inOutTime,
-    required this.attendanceId,
-    required this.date,
-    required this.reason,
-    required this.lateLoginReason,
-    required this.earlyLoginReason,
-    required this.loginregularised,
-    required this.logoutregularised,
-    required this.isLatelogin,
-    required this.isEarlyLogout,
+    this.employeeid,
+    this.name,
+    this.branchid,
+    this.inOut,
+    this.uniid,
+    this.inOutTime,
+    this.attendanceId,
+    this.date,
+    this.reason,
+    this.lateLoginReason,
+    this.earlyLoginReason,
+    this.loginregularised,
+    this.logoutregularised,
+    this.isLatelogin,
+    this.isEarlyLogout,
   });
 
-  static Future<List<ToRegularise>> toRegulariseList(
+  List<ToRegularise> toRegulriseList = [];
+
+  Future<List<ToRegularise>> toRegulariseList(
       List<MyAttendanceModel> json) async {
     List<ToRegularise> toRegulrise = [];
 
@@ -50,6 +53,7 @@ class ToRegularise {
       log(element.toString());
     }
     print("toRegulrise AFTER ${toRegulrise.length.toString()}");
+    toRegulriseList = toRegulrise;
     return toRegulrise;
   }
 

@@ -51,6 +51,7 @@ class Data {
     required this.gaurdian,
     required this.indata,
     required this.updatedby,
+    required this.applicationnumber,
   });
 
   String formrequestid;
@@ -66,6 +67,7 @@ class Data {
   String gaurdian;
   dynamic indata;
   dynamic updatedby;
+  String applicationnumber;
 
   factory Data.fromJson(Map<String, dynamic> json) {
     // Map data = json.decode(json["data"].toString());
@@ -85,6 +87,7 @@ class Data {
       gaurdian: json["accompanied_by"] ?? '',
       indata: json["indata"] ?? 'NULL',
       updatedby: json["updated_by"] ?? '',
+      applicationnumber: json["applicationnumber"] ?? '',
     );
   }
 

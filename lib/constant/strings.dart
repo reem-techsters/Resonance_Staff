@@ -35,7 +35,7 @@ class Strings {
   static List<Map<String, String>> drawerRoutes = [
     {"Dashboard": 'todayAttendance'},
     {"Leaves": GetRoutes.pageAppliedLeaves},
-    {"Approve Leaves": GetRoutes.pageApproveLeaves},
+    // {"Approve Leaves": GetRoutes.pageApproveLeaves},
     {"Reporting Employee": GetRoutes.pageReportingEmployee},
     {"My Attendance": GetRoutes.pageMyAttendance},
     {"Parent Concerns": GetRoutes.pageParentConcern},
@@ -44,13 +44,14 @@ class Strings {
   List<String> drawerIconList = [
     'assets/icon/ic_todayattendence.png',
     'assets/icon/ic_leave.png',
-    'assets/icon/ic_approveleave.png',
+    // 'assets/icon/ic_approveleave.png',
     'assets/icon/ic_reportingemployee.png',
     'assets/icon/ic_myattendance.png',
     'assets/icon/ic_parentconcern.png',
     'assets/icon/ic_outpass.png',
   ];
   List<String> drawerIconList2 = [
+    'assets/icon/ic_approveleave.png',
     'assets/icon/ic_regularisation.png',
     'assets/icon/ic_payslip.png',
     'assets/icon/ic_application.png',
@@ -66,7 +67,7 @@ class Strings {
     if (userId != "3" && userId != "16") {
       log('!= 3,16 working');
       print('not 3 --> ${drawerRoutes.toString()}');
-      drawerRoutes.removeRange(6, drawerRoutes.length);
+      drawerRoutes.removeRange(5, drawerRoutes.length);
       return drawerRoutes;
     } else {
       log('3,16 working');
@@ -80,7 +81,7 @@ class Strings {
     drawerRoutes.addAll([
       {"Dashboard": 'todayAttendance'},
       {"Leaves": GetRoutes.pageAppliedLeaves},
-      {"Approve Leaves": GetRoutes.pageApproveLeaves},
+      // {"Approve Leaves": GetRoutes.pageApproveLeaves},
       {"Reporting Employee": GetRoutes.pageReportingEmployee},
       {"My Attendance": GetRoutes.pageMyAttendance},
       {"Parent Concerns": GetRoutes.pageParentConcern},

@@ -1,5 +1,6 @@
 import 'dart:developer';
 import 'package:attendance/controller/model_state/bank_details_ctrl.dart';
+import 'package:attendance/controller/model_state/leave_request_ctrl.dart';
 import 'package:attendance/controller/model_state/my_attendance_ctrl.dart';
 import 'package:attendance/controller/model_state/parent_concern_controller.dart';
 import 'package:attendance/model/parent_concern_model.dart';
@@ -265,6 +266,79 @@ class OutsideCardWidget extends StatelessWidget {
                             backgroundColor: Colors.red),
                         onPressed: () {
                           controller.outsideWorkApproveOrReject(context, 2);
+                        },
+                        child: Text('Reject')),
+                  ],
+                )
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+//-----StudentCardWidget
+class StudentCardWidget extends StatelessWidget {
+  final dynamic data;
+  final int index;
+  final LeaveRequestController controller;
+  const StudentCardWidget({
+    super.key,
+    required this.index,
+    required this.controller,
+    required this.data,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimationConfiguration.staggeredList(
+      position: index,
+      duration: const Duration(milliseconds: 375),
+      child: SlideAnimation(
+        verticalOffset: 50.0,
+        child: Card(
+          color: Color.fromRGBO(246, 244, 238, 1),
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                CustomRichText.customRichText("Name :", data!.name.toString()),
+                CustomRichText.customRichText(
+                    "Application Number :", data!.applicationnumber.toString()),
+                CustomRichText.customRichText(
+                    "From :", data!.leavefrom.toString().split(' ')[0]),
+                CustomRichText.customRichText(
+                    "To :", data!.leaveto.toString().split(' ')[0]),
+                CustomRichText.customRichText(
+                    "Reason :", data!.reason.toString()),
+                SizedBox(height: 5.0),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    ElevatedButton(
+                        onPressed: () {
+                          controller.studentleaveApproveReject(
+                              days: data!.days.toString(),
+                              fcm: data!.leaverequestid.toString(),
+                              leaverequestid: data!.leaverequestid.toString(),
+                              status: '1',
+                              userid: GetUserData().getUserId());
+                        },
+                        child: Text('Approve')),
+                    ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.red),
+                        onPressed: () {
+                          controller.studentleaveApproveReject(
+                              days: data!.days.toString(),
+                              fcm: data!.firebase.toString(),
+                              leaverequestid: data!.leaverequestid.toString(),
+                              status: '0',
+                              userid: GetUserData().getUserId());
                         },
                         child: Text('Reject')),
                   ],

@@ -284,8 +284,9 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
         width: width,
         height: height / 3,
         child: Padding(
-          padding: const EdgeInsets.only(top: 20.0),
+          padding: const EdgeInsets.only(top: 20.0, left: 15),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 '${txt1.split(' ')[0]}\n${txt1.split(' ')[1]}',

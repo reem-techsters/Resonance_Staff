@@ -7,6 +7,8 @@ import 'package:attendance/routes/getRoutes.dart';
 import 'package:attendance/utils/get_user_id.dart';
 import 'package:attendance/utils/get_widget_state.dart';
 import 'package:attendance/view/pages/applications/add_application.dart';
+import 'package:attendance/view/pages/approve_leaves/approve_leaves.dart';
+import 'package:attendance/view/pages/approve_leaves/student_screen.dart';
 import 'package:attendance/view/pages/finances/bank/bank_details_screen.dart';
 import 'package:attendance/view/pages/authenthication/login.dart';
 import 'package:attendance/view/pages/regularisation/outside_work.dart';
@@ -32,6 +34,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
   bool isVisibleRegularise = false;
   bool isVisibleFinances = false;
   bool isVisibleApplications = false;
+  bool isVisibleApproveLeaves = false;
   SelectedPage selectedPageCtrl = Get.put(SelectedPage());
   ProvGetnSet roleid = Get.put(ProvGetnSet());
 
@@ -160,11 +163,11 @@ class _CustomDrawerState extends State<CustomDrawer> {
                       },
                     ),
                   ),
-                  SizedBox(height: 8.0),
+                  SizedBox(height: 15.0),
                   InkWell(
                     onTap: () {
                       setState(() {
-                        isVisibleRegularise = !isVisibleRegularise;
+                        isVisibleApproveLeaves = !isVisibleApproveLeaves;
                       });
                       setState(() {
                         selectedPageCtrl.stateSelectedPage.value = -1;
@@ -173,10 +176,41 @@ class _CustomDrawerState extends State<CustomDrawer> {
                       });
                     },
                     child: DefaultdropdownDrawerOption(
-                      visibility: isVisibleRegularise,
+                      visibility: isVisibleApproveLeaves,
                       iconList: Strings().drawerIconList2[0],
-                      label: 'Regularisation',
+                      label: 'Approve Leaves',
                       padenum: -1,
+                      stateSelectedPage:
+                          selectedPageCtrl.stateSelectedPage.value,
+                    ),
+                  ),
+                  SubWidgets(
+                    visibility: isVisibleApproveLeaves,
+                    screen: ApproveLeaves(),
+                    label: 'Employee',
+                  ),
+                  SubWidgets(
+                    visibility: isVisibleApproveLeaves,
+                    screen: StudentScreen(),
+                    label: 'Student',
+                  ),
+                  SizedBox(height: 8.0),
+                  InkWell(
+                    onTap: () {
+                      setState(() {
+                        isVisibleRegularise = !isVisibleRegularise;
+                      });
+                      setState(() {
+                        selectedPageCtrl.stateSelectedPage.value = -2;
+                        print(selectedPageCtrl.stateSelectedPage.value
+                            .toString());
+                      });
+                    },
+                    child: DefaultdropdownDrawerOption(
+                      visibility: isVisibleRegularise,
+                      iconList: Strings().drawerIconList2[1],
+                      label: 'Regularisation',
+                      padenum: -2,
                       stateSelectedPage:
                           selectedPageCtrl.stateSelectedPage.value,
                     ),
@@ -197,16 +231,16 @@ class _CustomDrawerState extends State<CustomDrawer> {
                         isVisibleFinances = !isVisibleFinances;
                       });
                       setState(() {
-                        selectedPageCtrl.stateSelectedPage.value = -2;
+                        selectedPageCtrl.stateSelectedPage.value = -3;
                         print(selectedPageCtrl.stateSelectedPage.value
                             .toString());
                       });
                     },
                     child: DefaultdropdownDrawerOption(
                       visibility: isVisibleFinances,
-                      iconList: Strings().drawerIconList2[1],
+                      iconList: Strings().drawerIconList2[2],
                       label: 'Finances',
-                      padenum: -2,
+                      padenum: -3,
                       stateSelectedPage:
                           selectedPageCtrl.stateSelectedPage.value,
                     ),
@@ -232,16 +266,16 @@ class _CustomDrawerState extends State<CustomDrawer> {
                               isVisibleApplications = !isVisibleApplications;
                             });
                             setState(() {
-                              selectedPageCtrl.stateSelectedPage.value = -3;
+                              selectedPageCtrl.stateSelectedPage.value = -4;
                               print(selectedPageCtrl.stateSelectedPage.value
                                   .toString());
                             });
                           },
                           child: DefaultdropdownDrawerOption(
                             visibility: isVisibleApplications,
-                            iconList: Strings().drawerIconList2[2],
+                            iconList: Strings().drawerIconList2[3],
                             label: 'Applications',
-                            padenum: -3,
+                            padenum: -4,
                             stateSelectedPage:
                                 selectedPageCtrl.stateSelectedPage.value,
                           ),
@@ -267,7 +301,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                     child: Row(
                       children: [
                         Image.asset(
-                          Strings().drawerIconList2[3],
+                          Strings().drawerIconList2[4],
                           width: MediaQuery.of(context).size.width / 13,
                           height: MediaQuery.of(context).size.height / 30,
                         ),
@@ -304,7 +338,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                     child: Row(
                       children: [
                         Image.asset(
-                          Strings().drawerIconList2[4],
+                          Strings().drawerIconList2[5],
                           width: MediaQuery.of(context).size.width / 13,
                           height: MediaQuery.of(context).size.height / 30,
                         ),

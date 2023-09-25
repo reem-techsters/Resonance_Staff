@@ -5,7 +5,8 @@
 import 'package:meta/meta.dart';
 import 'dart:convert';
 
-LeaveRequestModel leaveRequestModelFromJson(String str) => LeaveRequestModel.fromJson(json.decode(str));
+LeaveRequestModel leaveRequestModelFromJson(String str) =>
+    LeaveRequestModel.fromJson(json.decode(str));
 
 //String leaveRequestModelToJson(LeaveRequestModel data) => json.encode(data.toJson());
 
@@ -20,9 +21,8 @@ class LeaveRequestModel {
   List<Data> data;
   String message;
 
-  
-
-  factory LeaveRequestModel.fromJson(Map<String, dynamic> json) => LeaveRequestModel(
+  factory LeaveRequestModel.fromJson(Map<String, dynamic> json) =>
+      LeaveRequestModel(
         status: json["status"],
         data: json["data"] == null
             ? []
@@ -38,19 +38,19 @@ class LeaveRequestModel {
 }
 
 class Data {
-  Data({
-    required this.leaverequestid,
-    required this.leavefrom,
-    required this.leaveto,
-    required this.days,
-    required this.reason,
-    required this.isapproved,
-    required this.statusupdatedby,
-    required this.userid,
-    required this.name,
-    required this.totalleaves,
-    required this.fcm
-  });
+  Data(
+      {required this.leaverequestid,
+      required this.leavefrom,
+      required this.leaveto,
+      required this.days,
+      required this.reason,
+      required this.isapproved,
+      required this.statusupdatedby,
+      required this.userid,
+      required this.name,
+      required this.totalleaves,
+      required this.fcm,
+      required this.employeeid});
 
   String leaverequestid;
   String leavefrom;
@@ -63,23 +63,29 @@ class Data {
   String fcm;
   String name;
   String totalleaves;
+  String employeeid;
 
   factory Data.fromJson(Map<String, dynamic> json) => Data(
-        leaverequestid: json["leaverequestid"] ?? null.toString(),
-        leavefrom: json["leavefrom"] == null ? null.toString() : json["leavefrom"],
-        leaveto: json["leaveto"] == null ? null.toString() : json["leaveto"],
-        days: json["days"] == null ? null.toString() : json["days"],
-        reason: json["reason"] == null ? null.toString() : json["reason"],
-        isapproved: json["isapproved"] == null ? null.toString() : json["isapproved"],
-        statusupdatedby: json["statusupdatedby"] == null ? null.toString() : json["statusupdatedby"],
-        userid: json["userid"] ?? null.toString(),
-        name: json["name"] == null ? null.toString() : json["name"],
-        totalleaves: json["totalleaves"] == null ? null.toString() : json["totalleaves"],
-        fcm: json["firebase"] == null ? null.toString() : json["firebase"]
-      );
+      leaverequestid: json["leaverequestid"] ?? null.toString(),
+      leavefrom:
+          json["leavefrom"] == null ? null.toString() : json["leavefrom"],
+      leaveto: json["leaveto"] == null ? null.toString() : json["leaveto"],
+      days: json["days"] == null ? null.toString() : json["days"],
+      reason: json["reason"] == null ? null.toString() : json["reason"],
+      isapproved:
+          json["isapproved"] == null ? null.toString() : json["isapproved"],
+      statusupdatedby: json["statusupdatedby"] == null
+          ? null.toString()
+          : json["statusupdatedby"],
+      userid: json["userid"] ?? null.toString(),
+      name: json["name"] == null ? null.toString() : json["name"],
+      totalleaves:
+          json["totalleaves"] == null ? null.toString() : json["totalleaves"],
+      fcm: json["firebase"] == null ? null.toString() : json["firebase"],
+      employeeid: json["employeeid"] ?? '');
 
-        @override
-          toString() {
+  @override
+  toString() {
     return "name: " + leaverequestid + ", address: " + reason;
   }
 

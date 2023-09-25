@@ -34,6 +34,7 @@ class ReportingEmployeeController extends GetxController {
       ReportingEmployeeModel userData =
           reportingEmployeeModelFromJson(body.toString());
       await updateReportingEmployeeModel(userData);
+      update();
       return true;
     }
     else{

@@ -1,6 +1,8 @@
 import 'dart:developer';
 import 'package:attendance/controller/model_state/my_attendance_ctrl.dart';
 import 'package:attendance/utils/get_user_id.dart';
+import 'package:attendance/view/pages/regularisation/outsidework_search.dart';
+import 'package:attendance/view/pages/regularisation/regularise_search.dart';
 import 'package:attendance/view/widgets/custom_appbar.dart';
 import 'package:attendance/view/widgets/custom_drawer.dart';
 import 'package:attendance/view/widgets/custom_error.dart';
@@ -33,6 +35,29 @@ class OutsideWorkScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   CustomAppBar("Absent/Outside Work"),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: InkWell(
+                      onTap: () {
+                        controller.searchData.clear();
+                        controller.searchCtrl.clear();
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => OutsideWorkSearchScreen(
+                              title: 'Absent/Outside Work'),
+                        ));
+                      },
+                      child: TextFormField(
+                        enabled: false,
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(30)),
+                          hintText: 'Search',
+                          prefixIcon: Icon(Icons.search),
+                          contentPadding: EdgeInsets.symmetric(vertical: 8),
+                        ),
+                      ),
+                    ),
+                  ),
                   controller.isloader
                       ? Expanded(
                           child: Center(child: CircularProgressIndicator()),
