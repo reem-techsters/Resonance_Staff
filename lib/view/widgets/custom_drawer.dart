@@ -375,12 +375,11 @@ class _CustomDrawerState extends State<CustomDrawer> {
       mainAxisSize: MainAxisSize.min,
       children: [
         Text("Do you want to logout?"),
-        SizedBox(
-          height: 10,
-        ),
+        SizedBox(height: 10.0),
         Padding(
           padding: EdgeInsets.only(left: 40, right: 40),
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Buttons.redButtonReason("Logout", () {
                 logoutFun(context);

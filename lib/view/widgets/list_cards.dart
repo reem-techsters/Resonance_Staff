@@ -95,68 +95,74 @@ class ParentConcernButtonWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-      data!.status == 'In Progress'
-          ? Expanded(
-              child: SizedBox(
-                height: 40,
-                child: TextFormField(
-                  controller: controller.commentCtrl,
-                  decoration: InputDecoration(
+    return Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          data!.status == 'In Progress'
+              ? Expanded(
+                  child: TextFormField(
+                    controller: controller.commentCtrl,
+                    decoration: InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'Enter Comment',
                       hintText: 'Comment',
-                      hintStyle: TextStyle(color: Colors.grey, fontSize: 13)),
+                      contentPadding: EdgeInsets.all(10.0),
+                      // hintStyle:
+                      //     TextStyle(color: Colors.grey, fontSize: 13),
+                    ),
+                  ),
+                )
+              : SizedBox(),
+          SizedBox(width: 10.0),
+          data!.status == 'Resolved'
+              ? Icon(Icons.check, color: Colors.green, size: 30.0)
+              : ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color.fromRGBO(25, 130, 198, 1)),
+                  onPressed: () async {
+                    if (data!.status == 'Pending') {
+                      log('${data!.status} --> In Progress');
+
+                      await controller.callInProgress(
+                          int.parse(data!.studentId!), int.parse(data!.id!));
+
+                      await controller.callParentConcernList(
+                          int.parse(GetUserData().getCurrentUser().branchid));
+                      await controller.loadresources();
+                      ParentConcernGetx().callParentConcernList(
+                          int.parse(GetUserData().getCurrentUser().userid));
+                    } else if (data!.status == 'In Progress' ||
+                        data!.status == 'Re-Open') {
+                      if (controller.commentCtrl.text.isNotEmpty) {
+                        log('${data!.status} --> Resolved');
+
+                        await controller.callResolved(
+                            int.parse(data!.studentId!),
+                            int.parse(data!.id!),
+                            controller.commentCtrl.text);
+
+                        await controller.callParentConcernList(
+                            int.parse(GetUserData().getCurrentUser().branchid));
+                        await controller.loadresources();
+                        ParentConcernGetx().callParentConcernList(
+                            int.parse(GetUserData().getCurrentUser().userid));
+                      } else {
+                        CustomSnackBar.atBottom(
+                            title: "Resolving Failed",
+                            body: "Please Enter Comments",
+                            status: false);
+                      }
+                    }
+                  },
+                  child: Text(data!.status == 'Pending'
+                      ? 'Mark as In Progress'
+                      : data!.status == 'In Progress' ||
+                              data!.status == 'Re-Open'
+                          ? 'Mark as Resolved'
+                          : ''),
                 ),
-              ),
-            )
-          : SizedBox(),
-      SizedBox(width: 10.0),
-      data!.status == 'Resolved'
-          ? Icon(Icons.check, color: Colors.green, size: 30.0)
-          : ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color.fromRGBO(25, 130, 198, 1)),
-              onPressed: () async {
-                if (data!.status == 'Pending') {
-                  log('${data!.status} --> In Progress');
-
-                  await controller.callInProgress(
-                      int.parse(data!.studentId!), int.parse(data!.id!));
-
-                  await controller.callParentConcernList(
-                      int.parse(GetUserData().getCurrentUser().branchid));
-                  await controller.loadresources();
-                  ParentConcernGetx().callParentConcernList(
-                      int.parse(GetUserData().getCurrentUser().userid));
-                } else if (data!.status == 'In Progress' ||
-                    data!.status == 'Re-Open') {
-                  if (controller.commentCtrl.text.isNotEmpty) {
-                    log('${data!.status} --> Resolved');
-
-                    await controller.callResolved(int.parse(data!.studentId!),
-                        int.parse(data!.id!), controller.commentCtrl.text);
-
-                    await controller.callParentConcernList(
-                        int.parse(GetUserData().getCurrentUser().branchid));
-                    await controller.loadresources();
-                    ParentConcernGetx().callParentConcernList(
-                        int.parse(GetUserData().getCurrentUser().userid));
-                  } else {
-                    CustomSnackBar.atBottom(
-                        title: "Resolving Failed",
-                        body: "Please Enter Comments",
-                        status: false);
-                  }
-                }
-              },
-              child: Text(data!.status == 'Pending'
-                  ? 'Mark as In Progress'
-                  : data!.status == 'In Progress' || data!.status == 'Re-Open'
-                      ? 'Mark as Resolved'
-                      : ''),
-            ),
-    ]);
+        ]);
   }
 }
 

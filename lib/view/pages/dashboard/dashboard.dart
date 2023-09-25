@@ -214,8 +214,8 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                                                 gridDelegate:
                                                     SliverGridDelegateWithFixedCrossAxisCount(
                                                   crossAxisCount: 3,
-                                                  crossAxisSpacing: 8.0,
-                                                  mainAxisSpacing: 8.0,
+                                                  crossAxisSpacing: 1.0,
+                                                  mainAxisSpacing: 1.0,
                                                 ),
                                                 children: [
                                                   GestureDetector(

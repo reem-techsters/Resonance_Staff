@@ -117,12 +117,23 @@ class LeaveRequestController extends GetxController {
       dynamic leaverequestid,
       dynamic status,
       dynamic userid}) async {
-    await ApproveLeaveApi(
-        days: days,
-        fcm: fcm,
+    log("Inside Controller");
+    log('days = ${days}');
+    log('fcm = ${fcm}');
+    log('leaverequestid = ${leaverequestid}');
+    log('status = ${status}');
+    log('userid = ${userid}');
+    await StudentService().studentApproveorReject(
         leaverequestid: leaverequestid,
         status: status,
+        days: days,
         userid: userid);
+    // ApproveLeaveApi(
+    //     days: days,
+    //     fcm: fcm,
+    //     leaverequestid: leaverequestid,
+    //     status: status,
+    //     userid: userid);
     getStudentList();
     update();
   }

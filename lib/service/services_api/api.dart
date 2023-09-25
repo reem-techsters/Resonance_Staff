@@ -293,7 +293,7 @@ class ApproveLeaveApi {
         "${Strings.baseUrl}approveRejectLeave/$leaverequestid/$status/$days/$userid";
     try {
       http.Response res = await http.get(Uri.parse(url));
-      print("ApproveLeaveApi api called ${res.statusCode}");
+      log("ApproveLeaveApi api called ${res.statusCode}");
 
       if (res.statusCode == 201) {
         Navigator.pop(context);
@@ -658,7 +658,7 @@ class GateOutApi {
   Future<http.Response> callApi() async {
     String url =
         "${Strings.baseUrl}studentoutpass?userid=$userid&branchid=$branchId";
-        log(url);
+    log(url);
     try {
       http.Response res = await http.get(Uri.parse(url));
       print("verify api called ${res.statusCode}");
